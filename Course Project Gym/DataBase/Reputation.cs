@@ -8,6 +8,8 @@ namespace Course_Project_Gym.DataBase
 {
     public class Reputation
     {
+        public int Id { get; set; }
+
         public string Reviews { get; set; }
         public int Mark { get; set; }
     }

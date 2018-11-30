@@ -8,8 +8,9 @@ namespace Course_Project_Gym.DataBase
 {
     public class Streets
     {
-        public string Name { get; set; }
+        public int Id { get; set; }
 
+        public string Name { get; set; }
         public int? CityId { get; set; }
         public City City { get; set; }
         public ICollection<Complex> Complices { get; set; }

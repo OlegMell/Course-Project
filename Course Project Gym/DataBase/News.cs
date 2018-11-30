@@ -8,6 +8,8 @@ namespace Course_Project_Gym.DataBase
 {
     public class News
     {
+        public int Id { get; set; }
+
         public string Name { get; set; }
         public string About { get; set; }
         public DateTime DateNews { get; set; }

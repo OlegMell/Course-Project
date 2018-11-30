@@ -8,6 +8,8 @@ namespace Course_Project_Gym.DataBase
 {
     public class AdditionalServices
     {
+        public int Id { get; set; }
+
         public string Name { get; set; }
         public ICollection<Complex> Complexes { get; set; }
         public ICollection<Subscriptions> Subscriptions { get; set; }

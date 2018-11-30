@@ -8,6 +8,8 @@ namespace Course_Project_Gym.DataBase
 {
     public class Subscriptions
     {
+        public int Id { get; set; }
+
         public decimal Price { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }

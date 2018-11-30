@@ -8,6 +8,8 @@ namespace Course_Project_Gym.DataBase
 {
     public class Images
     {
-        public string Links { get; set; }
+        public int Id { get; set; }
+
+        public byte[] Link { get; set; }
     }
 }

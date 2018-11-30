@@ -8,8 +8,9 @@ namespace Course_Project_Gym.DataBase
 {
     public class Complex
     {
-        public string Name { get; set; }
+        public int Id { get; set; }
 
+        public string Name { get; set; }
         public int? AddressId { get; set; }
         public Streets Street { get; set; }
         public ICollection<AdditionalServices> AdditionalServices { get; set; }
