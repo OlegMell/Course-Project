@@ -12,6 +12,7 @@ namespace Course_Project_Gym.DataBase
 
         public int? AddressId { get; set; }
         public Streets Street { get; set; }
+
         public ICollection<AdditionalServices> AdditionalServices { get; set; }
     }
 }
