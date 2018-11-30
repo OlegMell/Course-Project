@@ -33,3 +33,5 @@
 
 .git/
 .vs/
+
+packages/
