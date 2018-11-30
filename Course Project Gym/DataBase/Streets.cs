@@ -13,6 +13,10 @@ namespace Course_Project_Gym.DataBase
         public string Name { get; set; }
         public int? CityId { get; set; }
         public City City { get; set; }
+
         public ICollection<Complex> Complices { get; set; }
+
+        public int? StreetId { get; set; }
+        public StreetType StreetType { get; set; }
     }
 }

@@ -70,17 +70,23 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DataBase\Accounts.cs" />
     <Compile Include="DataBase\AccountType.cs" />
     <Compile Include="DataBase\AdditionalServices.cs" />
     <Compile Include="DataBase\City.cs" />
+    <Compile Include="DataBase\Clients.cs" />
     <Compile Include="DataBase\Complex.cs" />
     <Compile Include="DataBase\DBContext.cs" />
     <Compile Include="DataBase\DBInitializator.cs" />
     <Compile Include="DataBase\Images.cs" />
     <Compile Include="DataBase\News.cs" />
+    <Compile Include="DataBase\Position.cs" />
     <Compile Include="DataBase\Reputation.cs" />
+    <Compile Include="DataBase\Schedules.cs" />
+    <Compile Include="DataBase\Staff.cs" />
     <Compile Include="DataBase\Stocks.cs" />
     <Compile Include="DataBase\Streets.cs" />
+    <Compile Include="DataBase\StreetType.cs" />
     <Compile Include="DataBase\Subscriptions.cs" />
     <Compile Include="DataBase\SubscriptionType.cs" />
     <Compile Include="MainWindow.xaml.cs">
