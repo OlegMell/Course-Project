@@ -13,5 +13,6 @@ namespace Course_Project_Gym.DataBase
         public string Name { get; set; }
         public string About { get; set; }
         public DateTime DateNews { get; set; }
+        
     }
 }

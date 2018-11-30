@@ -15,5 +15,7 @@ namespace Course_Project_Gym.DataBase
         public Streets Street { get; set; }
 
         public ICollection<AdditionalServices> AdditionalServices { get; set; }
+        public ICollection<News> News { get; set; }
+        public ICollection<Images> Images { get; set; }
     }
 }

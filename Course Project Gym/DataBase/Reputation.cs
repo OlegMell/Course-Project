@@ -12,5 +12,7 @@ namespace Course_Project_Gym.DataBase
 
         public string Reviews { get; set; }
         public int Mark { get; set; }
+
+        public Complex Complex { get; set; }
     }
 }

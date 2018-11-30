@@ -11,5 +11,6 @@ namespace Course_Project_Gym.DataBase
         public int Id { get; set; }
 
         public byte[] Link { get; set; }
+
     }
 }
