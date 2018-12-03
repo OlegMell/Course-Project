@@ -11,9 +11,7 @@ namespace Course_Project_Gym.DataBase
         public int Id { get; set; }
 
         public string Name { get; set; }
-        public int? AddressId { get; set; }
-        public Streets Street { get; set; }
-
+        public Address Address { get; set; }
         public ICollection<AdditionalServices> AdditionalServices { get; set; }
         public ICollection<News> News { get; set; }
         public ICollection<Images> Images { get; set; }

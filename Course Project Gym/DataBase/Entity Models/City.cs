@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Course_Project_Gym.DataBase
 {
-    public class StreetType
+    public class City
     {
-        public string NameType { get; set; }
+        public int Id { get; set; }
 
+        public string Name { get; set; }
     }
 }

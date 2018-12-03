@@ -44,3 +44,5 @@ C:\Users\olegm\source\repos\Course-Project\Course Project Gym\bin\Debug\Material
 C:\Users\olegm\source\repos\Course-Project\Course Project Gym\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\olegm\source\repos\Course-Project\Course Project Gym\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\olegm\source\repos\Course-Project\Course Project Gym\obj\Debug\App.baml
+C:\Users\olegm\source\repos\Course-Project\Course Project Gym\obj\Debug\LoginWnd.g.cs
+C:\Users\olegm\source\repos\Course-Project\Course Project Gym\obj\Debug\LoginWnd.baml
