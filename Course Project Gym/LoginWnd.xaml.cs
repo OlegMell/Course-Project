@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Course_Project_Gym.DataBase;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,17 @@ namespace Course_Project_Gym
         public LoginWnd()
         {
             InitializeComponent();
+
+            using (DBContext ctx = new DBContext())
+            {
+                var cpx = ctx.Complexes.ToList();
+                var staff = ctx.Staffs.ToList();
+            }
+        }
+
+        private void PowerBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -30,6 +30,6 @@ namespace Course_Project_Gym.DataBase
         public DbSet<StreetType> StreetTypes { get; set; }
         public DbSet<Subscriptions> Subscriptions { get; set; }
         public DbSet<SubscriptionType> SubscriptionTypes { get; set; }
-
+        public DbSet<Address> Addresses { get; set; }
     }
 }

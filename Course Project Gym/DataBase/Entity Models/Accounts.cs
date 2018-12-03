@@ -12,6 +12,6 @@ namespace Course_Project_Gym.DataBase
 
         public string Login { get; set; }
         public string Password { get; set; }
-        public AccountType AccountType { get; set; }
+        virtual public AccountType AccountType { get; set; }
     }
 }
