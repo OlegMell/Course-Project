@@ -14,5 +14,6 @@ namespace Course_Project_Gym.DataBase
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public ICollection<AdditionalServices> Services { get; set; }
+        virtual public SubscriptionType SubscriptionType { get; set; }
     }
 }

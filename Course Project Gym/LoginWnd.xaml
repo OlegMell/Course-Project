@@ -6,14 +6,177 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Course_Project_Gym"
         mc:Ignorable="d"
-        Title="Login" Height="555" Width="600" WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="Sourse Images/test_logo.png">
+        Title="Login" Height="700" Width="600" WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="Sourse Images/test_logo.png">
+    <Window.Resources>
+        <Storyboard x:Key="SingInOpenSb">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="rectangle">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-536.774"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-536.774"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="packIcon1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-536.774"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBox">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-536.774"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="packIcon2">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-536.774"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="passwordBox">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-536.774"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="button1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-536.774"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="rectangle1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-540.108"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-540.108"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBox1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-540.108"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBox2">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-540.108"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBox3">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-540.108"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBox4">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-540.108"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="comboBox">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-540.108"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBox5">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-540.108"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBox6">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-540.108"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="comboBox1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-540.108"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="button2">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-540.108"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="button">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-705"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="button">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-1.667"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="returnBtn">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-615"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="returnBtn">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-1.667"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="SingInCloseSb">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="rectangle">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-573.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.667"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-573.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.667"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="stackPanel">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-573.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.667"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="stackPanel1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-573.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.667"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="button1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-573.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.667"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="button">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-711.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="returnBtn">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-615"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-336.667"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="rectangle1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-543.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="33.334"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-543.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="33.334"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBox1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-543.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="33.334"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBox2">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-543.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="33.334"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBox3">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-543.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="33.334"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="stackPanel2">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-543.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="33.334"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBox5">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-543.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="33.334"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBox6">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-543.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="33.334"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="comboBox1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-543.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="33.334"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="button2">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-543.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="33.334"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+    
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="150"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="120"/>
+            <RowDefinition Height="130"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
@@ -35,7 +198,7 @@
         <!--End-->
 
         <!--logo-->
-        <Image VerticalAlignment="Top" Margin="10" Width="95" Height="95" Source="Sourse Images/test_logo.png">
+        <Image x:Name="image" VerticalAlignment="Top" Margin="10" Width="110" Height="110" Source="Sourse Images/test_logo.png">
             <Image.Effect>
                 <DropShadowEffect ShadowDepth="2" Opacity="0.2"/>
             </Image.Effect>
@@ -44,31 +207,265 @@
         <!--power button-->
         <Button x:Name="powerBtn" Click="PowerBtn_Click" Margin="2" Width="30" Height="20" Padding="-10" Grid.Column="1" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Right" VerticalAlignment="Top">
             <Button.Content>
-                <materialDesign:PackIcon Kind="PowerStandby" Foreground="#f44336" Width="20" Height="20"/>
+                <materialDesign:PackIcon x:Name="packIcon" Kind="PowerStandby" Foreground="#f44336" Width="20" Height="20"/>
             </Button.Content>
         </Button>
 
         <!--sing in button-->
-        <Button Grid.Column="1" Content="Sing In" Width="100" Height="40" Margin="15,0,15,40" Background="#f44336" BorderBrush="#f44336" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+        <Button x:Name="button" Grid.Column="1" Content="Sing In" Width="100" Height="40" Margin="15,0,15,40" Background="#f44336" BorderBrush="#f44336" HorizontalAlignment="Right" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Click">
+                    <BeginStoryboard Storyboard="{StaticResource SingInOpenSb}"/>
+                </EventTrigger>
+            </Button.Triggers>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
 
         <!--White Login panel-->
-        <Grid HorizontalAlignment="Center" VerticalAlignment="top" Margin="0,50,0,0" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
+        <Grid x:Name="grid" HorizontalAlignment="Center" VerticalAlignment="top" Margin="0,80,0,0" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
             <Grid.Effect>
                 <DropShadowEffect BlurRadius="3" Opacity="0.2" ShadowDepth="3" Direction="320"/>
             </Grid.Effect>
-            <Rectangle Fill="White" Width="400" Height="300" RadiusX="15" RadiusY="15"/>
+            <Rectangle x:Name="rectangle" Fill="White" Width="400" Height="400" RadiusX="15" RadiusY="15" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
 
-            <TextBlock Text="Login" FontSize="40" Foreground="#f44336" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,15,0,0" FontWeight="Bold" Opacity="0.7" Width="112"/>
-            <StackPanel Orientation="Horizontal">
-                <materialDesign:PackIcon Kind="Email" Opacity="0.6" VerticalAlignment="Center" Width="15" Height="15" Margin="20,-70,10,0"/>
-                <TextBox FontSize="19" Height="53" Width="300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,80,0,0" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+            <TextBlock x:Name="textBlock" Text="Login" FontSize="40" Foreground="#f44336" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="144,15,150,0" FontWeight="Bold" Opacity="0.7" Width="106" RenderTransformOrigin="0.5,0.5">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <StackPanel x:Name="stackPanel" Orientation="Horizontal" RenderTransformOrigin="0.5,0.5">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+                <materialDesign:PackIcon x:Name="packIcon1" Kind="Email" Opacity="0.6" VerticalAlignment="Center" Width="15" Height="15" Margin="20,120,10,227.5" RenderTransformOrigin="0.5,0.5">
+                    <materialDesign:PackIcon.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </materialDesign:PackIcon.RenderTransform>
+                </materialDesign:PackIcon>
+                <TextBox x:Name="textBox" FontSize="19" Height="53" Width="300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,110,0,0" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" RenderTransformOrigin="0.5,0.5">
+                    <TextBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBox.RenderTransform>
+                </TextBox>
             </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <materialDesign:PackIcon Kind="TextboxPassword" Opacity="0.6" VerticalAlignment="Center" Width="15" Height="15" Margin="20,90,10,0"/>
-                <PasswordBox FontSize="19" Height="53" Width="300" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,90,0,25" materialDesign:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+            <StackPanel x:Name="stackPanel1" Orientation="Horizontal" RenderTransformOrigin="0.5,0.5">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+                <materialDesign:PackIcon x:Name="packIcon2" Kind="TextboxPassword" Opacity="0.6" VerticalAlignment="Center" Width="15" Height="15" Margin="20,90,10,0" RenderTransformOrigin="0.5,0.5">
+                    <materialDesign:PackIcon.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </materialDesign:PackIcon.RenderTransform>
+                </materialDesign:PackIcon>
+                <PasswordBox x:Name="passwordBox" FontSize="19" Height="53" Width="300" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,90,0,25" materialDesign:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" RenderTransformOrigin="0.5,0.5">
+                    <PasswordBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </PasswordBox.RenderTransform>
+                </PasswordBox>
             </StackPanel>
-            <Button Content="Enter" Margin="20" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Bottom" Background="#f44336" BorderBrush="#f44336"/>
+            <Button x:Name="button1" Content="Enter" Margin="20" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Bottom" Background="#f44336" BorderBrush="#f44336" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
         </Grid>
+        <Grid x:Name="grid1" Grid.Column="1" HorizontalAlignment="Right" Margin="0,21.667,-453.333,25" Grid.Row="1" Width="416.666">
+
+            <Rectangle x:Name="rectangle1" Fill="White" RadiusX="15" RadiusY="15" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <TextBlock x:Name="textBlock1" Text="Sing In" FontSize="35" Margin="10" FontWeight="DemiBold" Foreground="#f44336" Opacity="0.7" VerticalAlignment="Top" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+            </TextBlock>
+            <TextBox x:Name="textBox1" FontSize="19" Height="53" Width="300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,65,0,0" materialDesign:HintAssist.Hint="Name" Style="{StaticResource MaterialDesignFloatingHintTextBox}" RenderTransformOrigin="0.5,0.5">
+                <TextBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBox.RenderTransform>
+            </TextBox>
+            <TextBox x:Name="textBox2" FontSize="19" Height="53" Width="300" Margin="0,125,0,0" VerticalAlignment="Top" materialDesign:HintAssist.Hint="Surname" Style="{StaticResource MaterialDesignFloatingHintTextBox}" RenderTransformOrigin="0.5,0.5">
+                <TextBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBox.RenderTransform>
+            </TextBox>
+            <TextBox x:Name="textBox3" FontSize="19" Height="53" Width="300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,185,0,0" materialDesign:HintAssist.Hint="Phone" Style="{StaticResource MaterialDesignFloatingHintTextBox}" RenderTransformOrigin="0.5,0.5">
+                <TextBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBox.RenderTransform>
+            </TextBox>
+            <StackPanel x:Name="stackPanel2" Orientation="Horizontal" Margin="60,244.166,0,130.833" Width="300" HorizontalAlignment="Left" RenderTransformOrigin="0.5,0.5">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+                <TextBox x:Name="textBox4" FontSize="19" VerticalAlignment="Top" Width="100" Height="50" Margin="0,0,50,0" materialDesign:HintAssist.Hint="Work" Style="{StaticResource MaterialDesignFloatingHintTextBox}" RenderTransformOrigin="0.5,0.5" >
+                    <TextBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBox.RenderTransform>
+                </TextBox>
+                <ComboBox x:Name="comboBox" FontSize="19" VerticalAlignment="Top" Width="150" Height="50" materialDesign:HintAssist.Hint="Position" Style="{StaticResource MaterialDesignFloatingHintComboBox}" RenderTransformOrigin="0.5,0.5">
+                    <ComboBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ComboBox.RenderTransform>
+                </ComboBox>
+            </StackPanel>
+            <TextBox x:Name="textBox5" FontSize="19" Height="53" Width="300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,300,0,0" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" RenderTransformOrigin="0.5,0.5">
+                <TextBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBox.RenderTransform>
+            </TextBox>
+            <TextBox x:Name="textBox6" FontSize="19" Height="53" Width="300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,355,0,0" materialDesign:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintTextBox}" RenderTransformOrigin="0.5,0.5">
+                <TextBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </TextBox.RenderTransform>
+            </TextBox>
+            <ComboBox x:Name="comboBox1" FontSize="19" Margin="0,415,0,0" VerticalAlignment="Top" Width="300" Height="50" materialDesign:HintAssist.Hint="Work place" Style="{StaticResource MaterialDesignFloatingHintComboBox}" RenderTransformOrigin="0.5,0.5">
+                <ComboBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </ComboBox.RenderTransform>
+            </ComboBox>
+            <Button x:Name="button2" Content="Ok" Margin="0,465,0,0" Width="100" Background="#f44336" BorderBrush="#f44336" Height="35" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+        </Grid>
+        <Button x:Name="returnBtn" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#f44336" BorderBrush="#f44336" HorizontalAlignment="Right" Height="Auto" Margin="0,50,-593.333,40" Width="96.666" RenderTransformOrigin="0.5,0.5">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Click">
+                    <BeginStoryboard Storyboard="{StaticResource SingInCloseSb}"/>
+                </EventTrigger>
+            </Button.Triggers>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Content>
+                <materialDesign:PackIcon x:Name="packIcon3" Kind="ArrowRight" Width="35" Height="35"/>
+            </Button.Content>
+        </Button>
         <!--End-->
 
     </Grid>

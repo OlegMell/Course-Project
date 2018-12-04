@@ -16,5 +16,6 @@ namespace Course_Project_Gym.DataBase
         public float WorkExperience { get; set; }
         virtual public Position Position { get; set; }
         virtual public Accounts Account { get; set; }
+        virtual public Complex Complex { get; set; }
     }
 }

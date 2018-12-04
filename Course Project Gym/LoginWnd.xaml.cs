@@ -28,6 +28,9 @@ namespace Course_Project_Gym
             {
                 var cpx = ctx.Complexes.ToList();
                 var staff = ctx.Staffs.ToList();
+                var shed = ctx.Schedules.ToList();
+                var add = ctx.AdditionalServices.ToList();
+                ;
             }
         }
 

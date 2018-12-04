@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Course_Project_Gym.DataBase
 {
-    public class DBContext : DbContext
+    public class DBContext : DbContext 
     {
         static DBContext() => Database.SetInitializer(new DBInitializator());
 
