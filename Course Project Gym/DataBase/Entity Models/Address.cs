@@ -10,8 +10,8 @@ namespace Course_Project_Gym.DataBase
     {
         public int Id { get; set; }
 
-        public City City { get; set; }
-        public Streets Street { get; set; }
+        virtual public City City { get; set; }
+        virtual public Streets Street { get; set; }
         public string House { get; set; }
     }
 }

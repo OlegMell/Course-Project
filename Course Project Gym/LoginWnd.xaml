@@ -3,12 +3,23 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Course_Project_Gym"
         mc:Ignorable="d"
-        Title="LoginWnd" Height="450" Width="700">
+        Title="Login" Height="555" Width="600" WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="Sourse Images/test_logo.png">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!--Background-->
         <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.5">
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.3">
                 <LinearGradientBrush.RelativeTransform>
                     <TransformGroup>
                         <ScaleTransform CenterY="0.5" CenterX="0.5"/>
@@ -21,8 +32,44 @@
                 <GradientStop Color="#FFF44336" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
+        <!--End-->
 
-        <TextBlock Text="Вход" FontFamily="Arial" FontSize="40" Foreground="#0069c0" HorizontalAlignment="Center" Margin="291,10,288,356" FontWeight="DemiBold" Opacity="0.7" Width="113"/>
-        <TextBox Height="30" VerticalAlignment="Top" Margin="0,150,0,0" Width="350"/>
+        <!--logo-->
+        <Image VerticalAlignment="Top" Margin="10" Width="95" Height="95" Source="Sourse Images/test_logo.png">
+            <Image.Effect>
+                <DropShadowEffect ShadowDepth="2" Opacity="0.2"/>
+            </Image.Effect>
+        </Image>
+
+        <!--power button-->
+        <Button x:Name="powerBtn" Click="PowerBtn_Click" Margin="2" Width="30" Height="20" Padding="-10" Grid.Column="1" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <Button.Content>
+                <materialDesign:PackIcon Kind="PowerStandby" Foreground="#f44336" Width="20" Height="20"/>
+            </Button.Content>
+        </Button>
+
+        <!--sing in button-->
+        <Button Grid.Column="1" Content="Sing In" Width="100" Height="40" Margin="15,0,15,40" Background="#f44336" BorderBrush="#f44336" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+
+        <!--White Login panel-->
+        <Grid HorizontalAlignment="Center" VerticalAlignment="top" Margin="0,50,0,0" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
+            <Grid.Effect>
+                <DropShadowEffect BlurRadius="3" Opacity="0.2" ShadowDepth="3" Direction="320"/>
+            </Grid.Effect>
+            <Rectangle Fill="White" Width="400" Height="300" RadiusX="15" RadiusY="15"/>
+
+            <TextBlock Text="Login" FontSize="40" Foreground="#f44336" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,15,0,0" FontWeight="Bold" Opacity="0.7" Width="112"/>
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Email" Opacity="0.6" VerticalAlignment="Center" Width="15" Height="15" Margin="20,-70,10,0"/>
+                <TextBox FontSize="19" Height="53" Width="300" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,80,0,0" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="TextboxPassword" Opacity="0.6" VerticalAlignment="Center" Width="15" Height="15" Margin="20,90,10,0"/>
+                <PasswordBox FontSize="19" Height="53" Width="300" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,90,0,25" materialDesign:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+            </StackPanel>
+            <Button Content="Enter" Margin="20" Height="40" Width="100" HorizontalAlignment="Center" VerticalAlignment="Bottom" Background="#f44336" BorderBrush="#f44336"/>
+        </Grid>
+        <!--End-->
+
     </Grid>
 </Window>
