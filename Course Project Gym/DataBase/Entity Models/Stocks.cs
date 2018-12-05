@@ -15,6 +15,7 @@ namespace Course_Project_Gym.DataBase
         public string About { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
+        virtual public AdditionalServices AdditionalService { get; set; }
 
     }
 }

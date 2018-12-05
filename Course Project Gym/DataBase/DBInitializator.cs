@@ -113,7 +113,7 @@ namespace Course_Project_Gym.DataBase
 
             #endregion
 
-            #region Инициализация аккаунта админа
+            #region Инициализация сотрудников
 
             var pass = GetHash("admin");
 
@@ -209,10 +209,59 @@ namespace Course_Project_Gym.DataBase
             context.Entry(schedules).State = EntityState.Added;
             context.SaveChanges();
 
-            
+
 
             #endregion
 
+            #region Инициализация клиента
+
+            Accounts account = new Accounts
+            {
+                Login = "Client1",
+                Password = "Client1",
+                AccountType = accountType3
+            };
+
+            Clients client = new Clients
+            {
+                Name = "Name1",
+                SurName = "Surname1",
+                PhoneNumber = "05035353535",
+                Account = account
+            };
+            context.Entry(account).State = EntityState.Added;
+            context.Entry(client).State = EntityState.Added;
+            context.SaveChanges();
+
+
+
+            #endregion
+
+            #region Инициализация Новостей
+            News news = new News
+            {
+                Name = "News1",
+                About = "About about about",
+                Complex =complex,
+                DateNews = new DateTime(2018,12,05,13,11,00)
+            };
+            context.Entry(news).State = EntityState.Added;
+            context.SaveChanges();
+            #endregion
+
+            #region Инициализация Акций
+            Stocks stock = new Stocks
+            {
+                Name = "Stock1",
+                AmountOfDiscount = 25,
+                AdditionalService = additionalServices,
+                About = "About",
+                StartDate = new DateTime(2018,12,05),
+                EndDate = new DateTime(2018,12,15)
+            };
+            context.Entry(stock).State = EntityState.Added;
+            context.SaveChanges();
+            #endregion
             //продолжить инициализацию...
         }
 
