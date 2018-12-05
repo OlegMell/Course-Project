@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -39,6 +40,8 @@ namespace Course_Project_Gym.DataBase.Repositories
 
         public Accounts Get(int id) => context.Accounts.ToList().FirstOrDefault(c => c.Id == id);
 
+        public Accounts Get(string login) => context.Accounts.ToList().FirstOrDefault(c => c.Login.Equals(login));
+        
         public IEnumerable<Accounts> GetAll()
         {
             return context.Accounts.ToList();
