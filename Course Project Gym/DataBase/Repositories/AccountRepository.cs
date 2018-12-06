@@ -20,7 +20,7 @@ namespace Course_Project_Gym.DataBase.Repositories
             return instance;
         }
 
-        DBContext context = new DBContext();
+        DBContext context = SingletonDbContext.GetInstance();
 
         public void Add(Accounts item)
         {
@@ -59,8 +59,7 @@ namespace Course_Project_Gym.DataBase.Repositories
             {
                 account.Login = item.Login;
                 account.Password = item.Password;
-                
-
+             
                 context.Entry(account).State = EntityState.Modified;
                 context.SaveChanges();
             }

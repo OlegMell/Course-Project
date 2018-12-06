@@ -124,6 +124,7 @@
     <Compile Include="DataBase\Entity Models\StreetType.cs" />
     <Compile Include="DataBase\Entity Models\Subscriptions.cs" />
     <Compile Include="DataBase\Entity Models\SubscriptionType.cs" />
+    <Compile Include="DataBase\SingletonDbContext.cs" />
     <Compile Include="DataBase\Utillities\Utillity.cs" />
     <Compile Include="LoginWnd.xaml.cs">
       <DependentUpon>LoginWnd.xaml</DependentUpon>

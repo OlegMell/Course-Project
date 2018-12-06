@@ -32,17 +32,18 @@ namespace Course_Project_Gym
         {
             DataContext = this;
             InitializeComponent();
-
-            using (DBContext ctx = new DBContext())
-            {
-                var cpx = ctx.Complexes.ToList();
-                var staff = ctx.Staffs.ToList();
-                var shed = ctx.Schedules.ToList();
-                var add = ctx.AdditionalServices.ToList();
-                ;
-            }
         }
 
+        private void CloseSignInPanel()
+        {
+            DoubleAnimation doubleAnimation = new DoubleAnimation { To = 400, Duration = TimeSpan.FromMilliseconds(450) };
+            loginGrid.BeginAnimation(HeightProperty, doubleAnimation);
+
+            DoubleAnimation doubleAnimation1 = new DoubleAnimation { To = 0, Duration = TimeSpan.FromMilliseconds(450) };
+            singInGrid.BeginAnimation(HeightProperty, doubleAnimation1);
+            IsOpenSingIn = false;
+            SignInBtn.Content = "Sing In";
+        } //анимация закрытия окна регистрации
 
         private void PowerBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -105,13 +106,7 @@ namespace Course_Project_Gym
             }
             else
             {
-                DoubleAnimation doubleAnimation = new DoubleAnimation { To = 400, Duration = TimeSpan.FromMilliseconds(450) };
-                loginGrid.BeginAnimation(HeightProperty, doubleAnimation);
-
-                DoubleAnimation doubleAnimation1 = new DoubleAnimation { To = 0, Duration = TimeSpan.FromMilliseconds(450) };
-                singInGrid.BeginAnimation(HeightProperty, doubleAnimation1);
-                IsOpenSingIn = false;
-                SignInBtn.Content = "Sing In";
+                CloseSignInPanel();
             }
             #endregion
 
@@ -133,7 +128,7 @@ namespace Course_Project_Gym
                 positionRegCb.ItemsSource = positions;
                 positionRegCb.DisplayMemberPath = "Name";
             }
-        }
+        } //открытие панели регистрации
 
         private void okRegBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -151,11 +146,11 @@ namespace Course_Project_Gym
                 Position = PositionRepository.GetInstance().Get((positionRegCb.SelectedItem as Position).Id),
                 Complex = ComplexRepository.GetInstance().Get(int.Parse(workPlaceRegCb.SelectedItem.ToString().ToArray().First().ToString()))
             };
+            StaffRepository.GetInstance().Add(nStaff);
 
-            var s = StaffRepository.GetInstance();
-            s.Add(nStaff);
-            var stf = s.GetAll();
-            ;
-        }
+            CloseSignInPanel();
+        } //регистрация пользователя
+        
+
     }
 }

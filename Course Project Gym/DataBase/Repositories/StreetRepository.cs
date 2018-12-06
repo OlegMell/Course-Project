@@ -19,7 +19,7 @@ namespace Course_Project_Gym.DataBase.Repositories
             return instance;
         }
 
-        DBContext context = new DBContext();
+        DBContext context = SingletonDbContext.GetInstance();
 
         public void Add(Streets item)
         {
