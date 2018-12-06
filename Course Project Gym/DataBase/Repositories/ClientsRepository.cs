@@ -56,7 +56,7 @@ namespace Course_Project_Gym.DataBase.Repositories
             {
                 client.Name = item.Name;
                 client.PhoneNumber = item.PhoneNumber;
-                client.Account = item.Account;
+                
                 client.SurName = item.SurName;
 
                 context.Entry(client).State = EntityState.Modified;

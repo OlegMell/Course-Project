@@ -40,11 +40,13 @@ namespace Course_Project_Gym.DataBase.Repositories
 
         public Position Get(int id) => context.Positions.ToList().FirstOrDefault(c => c.Id == id);
 
+        public Position Get(string name) => context.Positions.ToList().FirstOrDefault(c => c.Name.Equals(name));
+
         public IEnumerable<Position> GetAll()
         {
             return context.Positions.ToList();
         }
-
+        
         public IEnumerable<Position> GetAll(Func<Position, bool> predicate)
         {
             return context.Positions.ToList().Where(predicate);

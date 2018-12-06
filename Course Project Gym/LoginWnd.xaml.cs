@@ -1,5 +1,6 @@
 ﻿using Course_Project_Gym.DataBase;
 using Course_Project_Gym.DataBase.Repositories;
+using Course_Project_Gym.DataBase.Utillities;
 using MaterialDesignColors;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,7 @@ namespace Course_Project_Gym
 
         public LoginWnd()
         {
+            DataContext = this;
             InitializeComponent();
 
             using (DBContext ctx = new DBContext())
@@ -40,20 +42,7 @@ namespace Course_Project_Gym
                 ;
             }
         }
-        
-        private static string GetHash(string data) //MD5 хеширование паролей
-        {
-            MD5 md5 = MD5.Create();
-            byte[] bytes = md5.ComputeHash(Encoding.Default.GetBytes(data));
 
-            StringBuilder builder = new StringBuilder();
-
-            foreach (var b in bytes)
-            {
-                builder.Append(b.ToString("x2"));
-            }
-            return builder.ToString();
-        }
 
         private void PowerBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -70,7 +59,7 @@ namespace Course_Project_Gym
                 packIcon1.Opacity = 1;
                 return;
             }
-            else if(passBox.Password.Equals(string.Empty))
+            else if (passBox.Password.Equals(string.Empty))
             {
                 packIcon2.Foreground = brush;
                 packIcon2.Opacity = 1;
@@ -81,9 +70,9 @@ namespace Course_Project_Gym
                 AccountRepository accountRepository = AccountRepository.GetInstance();
 
                 var account = accountRepository.Get(emailTb.Text);
-                if(account != null)
+                if (account != null)
                 {
-                    if(account.Password.Equals(GetHash(passBox.Password)))
+                    if (account.Password.Equals(Utillity.GetInstance().GetHash(passBox.Password)))
                     {
                         Main = new MainWindow();
                         Main.Show();
@@ -108,26 +97,65 @@ namespace Course_Project_Gym
             {
                 DoubleAnimation doubleAnimation = new DoubleAnimation { From = 400, To = 0, Duration = TimeSpan.FromMilliseconds(450) };
                 loginGrid.BeginAnimation(HeightProperty, doubleAnimation);
-                
+
                 DoubleAnimation doubleAnimation1 = new DoubleAnimation { From = 0, To = 600, Duration = TimeSpan.FromMilliseconds(450) };
                 singInGrid.BeginAnimation(HeightProperty, doubleAnimation1);
                 IsOpenSingIn = true;
-                SingInBtn.Content = "Login";
+                SignInBtn.Content = "Login";
             }
             else
             {
-                DoubleAnimation doubleAnimation = new DoubleAnimation {To = 400, Duration = TimeSpan.FromMilliseconds(450) };
+                DoubleAnimation doubleAnimation = new DoubleAnimation { To = 400, Duration = TimeSpan.FromMilliseconds(450) };
                 loginGrid.BeginAnimation(HeightProperty, doubleAnimation);
-                
+
                 DoubleAnimation doubleAnimation1 = new DoubleAnimation { To = 0, Duration = TimeSpan.FromMilliseconds(450) };
                 singInGrid.BeginAnimation(HeightProperty, doubleAnimation1);
                 IsOpenSingIn = false;
-                SingInBtn.Content = "Sing In";
+                SignInBtn.Content = "Sing In";
             }
             #endregion
 
+            var complexes = ComplexRepository.GetInstance().GetAll();
+            var positions = PositionRepository.GetInstance().GetAll();
 
-            //регистрация...
+            if (complexes.Count() != 0)
+            {
+                StringBuilder builder = new StringBuilder();
+                foreach (var item in complexes)
+                {
+                    builder.Append(item.Id + " " + item.Name + " " + item.Address.City.Name + " " + item.Address.Street.Name + " " + item.Address.House);
+                    workPlaceRegCb.Items.Add(builder.ToString());
+                }
+            }
+
+            if (positions.Count() != 0)
+            {
+                positionRegCb.ItemsSource = positions;
+                positionRegCb.DisplayMemberPath = "Name";
+            }
+        }
+
+        private void okRegBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Staff nStaff = new Staff
+            {
+                Name = nameRegTb.Text,
+                SurName = surnameRegtb.Text,
+                PhoneNumber = phoneRegTb.Text,
+                WorkExperience = float.Parse(workRegTb.Text),
+                Account = new Accounts
+                {
+                    Password = passRegTb.Password,
+                    Login = emailRegTb.Text
+                },
+                Position = PositionRepository.GetInstance().Get((positionRegCb.SelectedItem as Position).Id),
+                Complex = ComplexRepository.GetInstance().Get(int.Parse(workPlaceRegCb.SelectedItem.ToString().ToArray().First().ToString()))
+            };
+
+            var s = StaffRepository.GetInstance();
+            s.Add(nStaff);
+            var stf = s.GetAll();
+            ;
         }
     }
 }

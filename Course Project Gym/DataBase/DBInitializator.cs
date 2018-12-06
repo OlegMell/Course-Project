@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Course_Project_Gym.DataBase.Utillities;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.IO;
@@ -15,19 +16,7 @@ namespace Course_Project_Gym.DataBase
         {
             #region Инициализация комплекса полностью
 
-            AccountType accountType = new AccountType
-            {
-                Name = "Тренер"
-            };
-            AccountType accountType2 = new AccountType
-            {
-                Name = "Администратор"
-            };
-            AccountType accountType3 = new AccountType
-            {
-                Name = "Клиент"
-            };
-
+           
             Position position = new Position
             {
                 Name = "Тренер"
@@ -40,10 +29,7 @@ namespace Course_Project_Gym.DataBase
 
 
 
-            context.Entry(accountType).State = EntityState.Added;
-            context.Entry(accountType2).State = EntityState.Added;
-            context.Entry(accountType3).State = EntityState.Added;
-            context.SaveChanges();
+           
 
             City city = new City
             {
@@ -115,7 +101,7 @@ namespace Course_Project_Gym.DataBase
 
             #region Инициализация сотрудников
 
-            var pass = GetHash("admin");
+            var pass = Utillity.GetInstance().GetHash("admin");
 
             Staff admin = new Staff
             {
@@ -127,8 +113,8 @@ namespace Course_Project_Gym.DataBase
                 Account = new Accounts
                 {
                     Login = "admin",
-                    Password = pass,
-                    AccountType = accountType2
+                    Password = pass
+                    
                 },
                 Complex = complex
            
@@ -146,8 +132,8 @@ namespace Course_Project_Gym.DataBase
                 Account = new Accounts
                 {
                     Login = "coach",
-                    Password = "coach1",
-                    AccountType = accountType
+                    Password = "coach1"
+                    
                 },
                 Complex = complex
                 
@@ -165,8 +151,8 @@ namespace Course_Project_Gym.DataBase
                 Account = new Accounts
                 {
                     Login = "coach2",
-                    Password = "coach2",
-                    AccountType = accountType
+                    Password = "coach2"
+                    
                 },
                 Complex = complex
 
@@ -215,21 +201,16 @@ namespace Course_Project_Gym.DataBase
 
             #region Инициализация клиента
 
-            Accounts account = new Accounts
-            {
-                Login = "Client1",
-                Password = "Client1",
-                AccountType = accountType3
-            };
+           
 
             Clients client = new Clients
             {
                 Name = "Name1",
                 SurName = "Surname1",
                 PhoneNumber = "05035353535",
-                Account = account
+                
             };
-            context.Entry(account).State = EntityState.Added;
+            
             context.Entry(client).State = EntityState.Added;
             context.SaveChanges();
 
@@ -264,19 +245,5 @@ namespace Course_Project_Gym.DataBase
             #endregion
             //продолжить инициализацию...
         }
-
-        private static string GetHash(string data) //MD5 хеширование паролей
-        {
-            MD5 md5 = MD5.Create();
-            byte[] bytes = md5.ComputeHash(Encoding.Default.GetBytes(data));
-
-            StringBuilder builder = new StringBuilder();
-
-            foreach (var b in bytes)
-            {
-                builder.Append(b.ToString("x2"));
-            }
-            return builder.ToString();
-        } 
     }
 }

@@ -59,7 +59,7 @@ namespace Course_Project_Gym.DataBase.Repositories
             {
                 account.Login = item.Login;
                 account.Password = item.Password;
-                account.AccountType = item.AccountType;
+                
 
                 context.Entry(account).State = EntityState.Modified;
                 context.SaveChanges();

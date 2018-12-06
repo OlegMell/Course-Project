@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ControlzEx, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\ControlzEx.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -51,6 +54,9 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -70,7 +76,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DataBase\Repositories\AccountRepository.cs" />
-    <Compile Include="DataBase\Repositories\AccountTypeRepository.cs" />
     <Compile Include="DataBase\Repositories\AdditionalServicesRepository.cs" />
     <Compile Include="DataBase\Repositories\AddressRepository.cs" />
     <Compile Include="DataBase\Repositories\CityRepository.cs" />
@@ -101,7 +106,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DataBase\Entity Models\Accounts.cs" />
-    <Compile Include="DataBase\Entity Models\AccountType.cs" />
     <Compile Include="DataBase\Entity Models\AdditionalServices.cs" />
     <Compile Include="DataBase\Entity Models\Address.cs" />
     <Compile Include="DataBase\Entity Models\City.cs" />
@@ -120,6 +124,7 @@
     <Compile Include="DataBase\Entity Models\StreetType.cs" />
     <Compile Include="DataBase\Entity Models\Subscriptions.cs" />
     <Compile Include="DataBase\Entity Models\SubscriptionType.cs" />
+    <Compile Include="DataBase\Utillities\Utillity.cs" />
     <Compile Include="LoginWnd.xaml.cs">
       <DependentUpon>LoginWnd.xaml</DependentUpon>
     </Compile>
