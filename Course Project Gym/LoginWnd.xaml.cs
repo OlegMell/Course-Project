@@ -33,10 +33,17 @@ namespace Course_Project_Gym
             DataContext = this;
             InitializeComponent();
 
-            Task.Run(new Action(() =>
+            TestConnectionAsync();
+        }
+
+        private async void TestConnectionAsync()
+        {
+            
+            await Task.Run(new Action(() =>
             {
                 AccountRepository.GetInstance().Get(1);
             }));
+            SignInBtn.IsEnabled = enterLogBtn.IsEnabled = true;
         }
 
         private void CloseSignInPanel()
@@ -115,6 +122,17 @@ namespace Course_Project_Gym
             }
             #endregion
 
+            Set();
+
+        } //открытие панели регистрации
+
+        public async void Set()
+        {
+            await Task.Run(Setter);
+        }
+
+        public Task Setter()
+        {
             var complexes = ComplexRepository.GetInstance().GetAll();
             var positions = PositionRepository.GetInstance().GetAll();
 
@@ -133,7 +151,8 @@ namespace Course_Project_Gym
                 positionRegCb.ItemsSource = positions;
                 positionRegCb.DisplayMemberPath = "Name";
             }
-        } //открытие панели регистрации
+            return Task.CompletedTask;
+        }
 
         private void okRegBtn_Click(object sender, RoutedEventArgs e)
         {

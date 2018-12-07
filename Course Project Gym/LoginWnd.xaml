@@ -50,7 +50,7 @@
         </Button>
 
         <!--sing in button-->
-        <Button x:Name="SignInBtn" Click="SingInBtn_Click" Content="Sign In" Width="100" Height="40" Margin="0,0,10,40" Background="#f44336" BorderBrush="#f44336" HorizontalAlignment="Right" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" Grid.Column="1"/>
+        <Button IsEnabled="false" x:Name="SignInBtn" Click="SingInBtn_Click" Content="Sign In" Width="100" Height="40" Margin="0,0,10,40" Background="#f44336" BorderBrush="#f44336" HorizontalAlignment="Right" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" Grid.Column="1"/>
 
         <!--White Login panel-->
         <Grid x:Name="singInGrid" Visibility="Visible" Height="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="0,125,173,-25" Width="417" Grid.RowSpan="2">
@@ -96,7 +96,7 @@
                 <materialDesign:PackIcon x:Name="packIcon2" Kind="TextboxPassword" Opacity="0.6" VerticalAlignment="Center" Width="20" Height="20" Margin="20,90,10,0"/>
                 <PasswordBox x:Name="passBox" FontSize="19" Height="53" Width="300" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,90,0,25" materialDesign:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
             </StackPanel>
-            <Button x:Name="enterLogBtn" Click="EnterLogBtn_Click" Content="Enter" Margin="-40,0,-60,20" Height="40" VerticalAlignment="Bottom" Background="#f44336" BorderBrush="#f44336" RenderTransformOrigin="0.5,0.5"/>
+            <Button IsEnabled="false" x:Name="enterLogBtn" Click="EnterLogBtn_Click" Content="Enter" Margin="-40,0,-60,20" Height="40" VerticalAlignment="Bottom" Background="#f44336" BorderBrush="#f44336" RenderTransformOrigin="0.5,0.5"/>
         </Grid>
         <!--End-->
         

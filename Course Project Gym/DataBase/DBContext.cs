@@ -14,7 +14,6 @@ namespace Course_Project_Gym.DataBase
         public DBContext() : base("myConnection") { }
 
         public DbSet<Accounts> Accounts { get; set; }
-        
         public DbSet<Clients> Clients { get; set; }
         public DbSet<Staff> Staffs { get; set; }
         public DbSet<Position> Positions { get; set; }
