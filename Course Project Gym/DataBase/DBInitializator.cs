@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Course_Project_Gym.DataBase
 {
-    class DBInitializator : DropCreateDatabaseIfModelChanges<DBContext>
+    class DBInitializator : DropCreateDatabaseAlways<DBContext>
     {
         protected override void Seed(DBContext context)
         {

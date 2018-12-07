@@ -23,9 +23,6 @@ namespace Course_Project_Gym.DataBase.Repositories
 
         public void Add(Staff item)
         {
-            //context.Staffs.Add(item);
-            //context.Positions.Attach(item.Position);
-            //context.Complexes.Attach(item.Complex);
             context.Entry(item).State = EntityState.Added;
             context.SaveChanges();
         }

@@ -32,6 +32,11 @@ namespace Course_Project_Gym
         {
             DataContext = this;
             InitializeComponent();
+
+            Task.Run(new Action(() =>
+            {
+                AccountRepository.GetInstance().Get(1);
+            }));
         }
 
         private void CloseSignInPanel()
