@@ -39,6 +39,9 @@ namespace Course_Project_Gym.DataBase.Repositories
 
         public News Get(int id) => context.News.ToList().FirstOrDefault(c => c.Id == id);
 
+        public News GetLast() => context.News.ToList().Last();
+
+
         public IEnumerable<News> GetAll()
         {
             return context.News.ToList();

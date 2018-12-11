@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
+using Course_Project_Gym.DataBase.Repositories;
 using HamburgerMenu;
 
 namespace Course_Project_Gym
@@ -24,8 +26,18 @@ namespace Course_Project_Gym
 
         public MainWindow()
         {
-            InitializeComponent();
+            DispatcherTimer timer = new DispatcherTimer
+            {
+                Interval = TimeSpan.FromSeconds(1)
+            };
 
+            timer.Tick += (s, r) =>
+            {
+                textNewsTbock.Text = NewsRepository.GetInstance().GetLast().About;
+            };
+            timer.Start();
+
+            InitializeComponent();
             humbrgMenu.ButtonMenu.Click += ButtonMenu_Click;
         }
 

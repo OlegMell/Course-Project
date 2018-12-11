@@ -22,7 +22,6 @@ namespace Course_Project_Gym.DataBase
         public DbSet<Complex> Complexes { get; set; }
         public DbSet<Images> Images { get; set; }
         public DbSet<News> News { get; set; }
-        public DbSet<Reputation> Reputations { get; set; }
         public DbSet<Schedules> Schedules { get; set; }
         public DbSet<Stocks> Stocks { get; set; }
         public DbSet<Streets> Streets { get; set; }

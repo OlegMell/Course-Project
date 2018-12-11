@@ -30,20 +30,18 @@ namespace Course_Project_Gym
 
         public LoginWnd()
         {
+            TestConnection();
             DataContext = this;
             InitializeComponent();
-
-            TestConnectionAsync();
         }
 
-        private async void TestConnectionAsync()
+        private  void TestConnection()
         {
-            
-            await Task.Run(new Action(() =>
-            {
+            //Task.Run(new Action(() =>
+            //{
                 AccountRepository.GetInstance().Get(1);
-            }));
-            SignInBtn.IsEnabled = enterLogBtn.IsEnabled = true;
+            //}));
+           // SignInBtn.IsEnabled = enterLogBtn.IsEnabled = true;
         }
 
         private void CloseSignInPanel()
@@ -63,6 +61,93 @@ namespace Course_Project_Gym
         } //закрытие окна
 
         private void EnterLogBtn_Click(object sender, RoutedEventArgs e)
+        {
+             OpenDashboard();
+        } //Вход пользователя
+
+        private void SingInBtn_Click(object sender, RoutedEventArgs e)
+        {
+            #region Animation
+            if (!IsOpenSingIn)
+            {
+                DoubleAnimation doubleAnimation = new DoubleAnimation { From = 400, To = 0, Duration = TimeSpan.FromMilliseconds(450) };
+                loginGrid.BeginAnimation(HeightProperty, doubleAnimation);
+
+                DoubleAnimation doubleAnimation1 = new DoubleAnimation { From = 0, To = 600, Duration = TimeSpan.FromMilliseconds(450) };
+                singInGrid.BeginAnimation(HeightProperty, doubleAnimation1);
+                IsOpenSingIn = true;
+                SignInBtn.Content = "Login";
+            }
+            else
+            {
+                CloseSignInPanel();
+            }
+            #endregion
+
+            //Set();
+
+            var complexes = ComplexRepository.GetInstance().GetAll();
+            var positions = PositionRepository.GetInstance().GetAll();
+
+            if (complexes.Count() != 0)
+            {
+                StringBuilder builder = new StringBuilder();
+                foreach (var item in complexes)
+                {
+                    builder.Append(item.Id + " " + item.Name + " " + item.Address.City.Name + " " + item.Address.Street.Name + " " + item.Address.House);
+                    workPlaceRegCb.Items.Add(builder.ToString());
+                }
+            }
+
+            if (positions.Count() != 0)
+            {
+                positionRegCb.ItemsSource = positions;
+                positionRegCb.DisplayMemberPath = "Name";
+            }
+
+        } //открытие панели регистрации
+
+        //public async void Set()
+        //{
+        //    await Task.Run(Setter);
+        //}
+
+        //public Task Setter()
+        //{
+           
+        //    return Task.CompletedTask;
+        //}
+
+        private void okRegBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Staff nStaff = new Staff
+            {
+                Name = nameRegTb.Text,
+                SurName = surnameRegtb.Text,
+                PhoneNumber = phoneRegTb.Text,
+                WorkExperience = float.Parse(workRegTb.Text),
+                Account = new Accounts
+                {
+                    Password = passRegTb.Password,
+                    Login = emailRegTb.Text
+                },
+                Position = PositionRepository.GetInstance().Get((positionRegCb.SelectedItem as Position).Id),
+                Complex = ComplexRepository.GetInstance().Get(int.Parse(workPlaceRegCb.SelectedItem.ToString().ToArray().First().ToString()))
+            };
+            StaffRepository.GetInstance().Add(nStaff);
+
+            CloseSignInPanel();
+        } //регистрация пользователя
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key.Equals(Key.Enter))
+            {
+                OpenDashboard();
+            }
+        }
+
+        private void OpenDashboard()
         {
             SolidColorBrush brush = new SolidColorBrush(Color.FromRgb(244, 67, 54));
 
@@ -101,80 +186,6 @@ namespace Course_Project_Gym
                     MessageBox.Show("Wrong email!\nPlease try again", "Error", MessageBoxButton.OK);
                 }
             }
-        } //Вход пользователя
-
-        private void SingInBtn_Click(object sender, RoutedEventArgs e)
-        {
-            #region Animation
-            if (!IsOpenSingIn)
-            {
-                DoubleAnimation doubleAnimation = new DoubleAnimation { From = 400, To = 0, Duration = TimeSpan.FromMilliseconds(450) };
-                loginGrid.BeginAnimation(HeightProperty, doubleAnimation);
-
-                DoubleAnimation doubleAnimation1 = new DoubleAnimation { From = 0, To = 600, Duration = TimeSpan.FromMilliseconds(450) };
-                singInGrid.BeginAnimation(HeightProperty, doubleAnimation1);
-                IsOpenSingIn = true;
-                SignInBtn.Content = "Login";
-            }
-            else
-            {
-                CloseSignInPanel();
-            }
-            #endregion
-
-            Set();
-
-        } //открытие панели регистрации
-
-        public async void Set()
-        {
-            await Task.Run(Setter);
-        }
-
-        public Task Setter()
-        {
-            var complexes = ComplexRepository.GetInstance().GetAll();
-            var positions = PositionRepository.GetInstance().GetAll();
-
-            if (complexes.Count() != 0)
-            {
-                StringBuilder builder = new StringBuilder();
-                foreach (var item in complexes)
-                {
-                    builder.Append(item.Id + " " + item.Name + " " + item.Address.City.Name + " " + item.Address.Street.Name + " " + item.Address.House);
-                    workPlaceRegCb.Items.Add(builder.ToString());
-                }
-            }
-
-            if (positions.Count() != 0)
-            {
-                positionRegCb.ItemsSource = positions;
-                positionRegCb.DisplayMemberPath = "Name";
-            }
-            return Task.CompletedTask;
-        }
-
-        private void okRegBtn_Click(object sender, RoutedEventArgs e)
-        {
-            Staff nStaff = new Staff
-            {
-                Name = nameRegTb.Text,
-                SurName = surnameRegtb.Text,
-                PhoneNumber = phoneRegTb.Text,
-                WorkExperience = float.Parse(workRegTb.Text),
-                Account = new Accounts
-                {
-                    Password = passRegTb.Password,
-                    Login = emailRegTb.Text
-                },
-                Position = PositionRepository.GetInstance().Get((positionRegCb.SelectedItem as Position).Id),
-                Complex = ComplexRepository.GetInstance().Get(int.Parse(workPlaceRegCb.SelectedItem.ToString().ToArray().First().ToString()))
-            };
-            StaffRepository.GetInstance().Add(nStaff);
-
-            CloseSignInPanel();
-        } //регистрация пользователя
-        
-
+        } //открытие главного окна 
     }
 }

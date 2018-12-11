@@ -85,7 +85,6 @@
     <Compile Include="DataBase\Repositories\IRepository.cs" />
     <Compile Include="DataBase\Repositories\NewsRepository.cs" />
     <Compile Include="DataBase\Repositories\PositionRepository.cs" />
-    <Compile Include="DataBase\Repositories\ReputationRepository.cs" />
     <Compile Include="DataBase\Repositories\SchedulesRepository.cs" />
     <Compile Include="DataBase\Repositories\StaffRepository.cs" />
     <Compile Include="DataBase\Repositories\StocksRepository.cs" />
@@ -120,7 +119,6 @@
     <Compile Include="DataBase\Entity Models\Images.cs" />
     <Compile Include="DataBase\Entity Models\News.cs" />
     <Compile Include="DataBase\Entity Models\Position.cs" />
-    <Compile Include="DataBase\Entity Models\Reputation.cs" />
     <Compile Include="DataBase\Entity Models\Schedules.cs" />
     <Compile Include="DataBase\Entity Models\Staff.cs" />
     <Compile Include="DataBase\Entity Models\Stocks.cs" />

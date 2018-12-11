@@ -7,11 +7,61 @@
         xmlns:local="clr-namespace:Course_Project_Gym"
         xmlns:local1="clr-namespace:HamburgerMenu"
         mc:Ignorable="d"
-        Title="Sportfit" Height="700" Width="1300" Icon="Sourse Images/test_logo.png" WindowStartupLocation="CenterScreen">
+        Title="Sportfit" Height="700" Width="1350" Icon="Sourse Images/test_logo.png" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="59*"/>
+            <ColumnDefinition Width="1233*"/>
         </Grid.ColumnDefinitions>
-        <local1:HumburgerMenu x:Name="humbrgMenu"/>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.3">
+                <LinearGradientBrush.RelativeTransform>
+                    <TransformGroup>
+                        <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                        <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                        <RotateTransform Angle="-40" CenterY="0.5" CenterX="0.5"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </LinearGradientBrush.RelativeTransform>
+                <GradientStop Color="#FF2196F3"/>
+                <GradientStop Color="#FFF44336" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <WrapPanel Grid.Column="1" >
+            <Grid>
+                <Rectangle Width="400" Height="500" Margin="10,80" RadiusX="15" RadiusY="15" Fill="White" Opacity="0.6">
+                    <Rectangle.Effect>
+                        <DropShadowEffect Color="#FF303030" RenderingBias="Quality" ShadowDepth="2" Opacity="0.2" />
+                    </Rectangle.Effect>
+                </Rectangle>
+                <StackPanel Margin="30">
+                    <TextBlock Text="Last news" FontSize="40" Margin="5,50" FontWeight="DemiBold"/>
+                    <TextBlock x:Name="textNewsTbock" Text="..." FontSize="35"/>
+                </StackPanel>
+            </Grid>
+            <Grid>
+                <Rectangle Width="400" Height="500" Margin="10,50" RadiusX="15" RadiusY="15" Fill="White" Opacity="0.6">
+                    <Rectangle.Effect>
+                        <DropShadowEffect Color="#FF303030" RenderingBias="Quality" ShadowDepth="2" Opacity="0.2" />
+                    </Rectangle.Effect>
+                </Rectangle>
+                <StackPanel Margin="30">
+                    <TextBlock Text="Workout now" FontSize="40" Margin="5,50" FontWeight="DemiBold"/>
+                    <TextBlock x:Name="workoutTblock" Text="..." FontSize="35"/>
+                </StackPanel>
+            </Grid>
+            <Grid>
+                <Rectangle Width="400" Height="500" Margin="10,50" RadiusX="15" RadiusY="15" Fill="White" Opacity="0.6">
+                    <Rectangle.Effect>
+                        <DropShadowEffect Color="#FF303030" RenderingBias="Quality" ShadowDepth="2" Opacity="0.2" />
+                    </Rectangle.Effect>
+                </Rectangle>
+                <StackPanel Margin="30">
+                    <TextBlock Text="Tasks" FontSize="40" Margin="5,50" FontWeight="DemiBold"/>
+                    <TextBlock x:Name="tasksTblock" Text="..." FontSize="35"/>
+                </StackPanel>
+            </Grid>
+        </WrapPanel>
+        <local1:HumburgerMenu x:Name="humbrgMenu" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>
