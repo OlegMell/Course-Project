@@ -9,32 +9,39 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using HamburgerMenu;
 
-namespace Course_Project_Gym
+namespace HamburgerMenu
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for HumburgerMenu.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class HumburgerMenu : UserControl
     {
+        public bool StateClosed { get; set; } = true;
 
-        public MainWindow()
+        public HumburgerMenu()
         {
             InitializeComponent();
-
-            humbrgMenu.ButtonMenu.Click += ButtonMenu_Click;
         }
 
         private void ButtonMenu_Click(object sender, RoutedEventArgs e)
         {
-            if(humbrgMenu.StateClosed)
-                humbrgMenu.menuPanel.Visibility = Visibility.Collapsed;
+            if (StateClosed)
+            {
+                Storyboard sb = FindResource("OpenMenu") as Storyboard;
+                sb.Begin();
+            }
             else
-                humbrgMenu.menuPanel.Visibility = Visibility.Visible;
+            {
+                Storyboard sb = FindResource("CloseMenu") as Storyboard;
+                sb.Begin();
+            }
+
+            StateClosed = !StateClosed;
         }
     }
 }

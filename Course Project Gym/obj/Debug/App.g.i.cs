@@ -74,6 +74,8 @@ namespace Course_Project_Gym {
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.0.0.0")]
         public static void Main() {
+            SplashScreen splashScreen = new SplashScreen("sourse%20images/test_logo.png");
+            splashScreen.Show(true);
             Course_Project_Gym.App app = new Course_Project_Gym.App();
             app.InitializeComponent();
             app.Run();

@@ -93,6 +93,10 @@
     <Compile Include="DataBase\Repositories\StreetTypeRepository.cs" />
     <Compile Include="DataBase\Repositories\SubscriptionRepository.cs" />
     <Compile Include="DataBase\Repositories\SubscriptionTypeRepository.cs" />
+    <Page Include="HumburgerMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="LoginWnd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -126,6 +130,9 @@
     <Compile Include="DataBase\Entity Models\SubscriptionType.cs" />
     <Compile Include="DataBase\SingletonDbContext.cs" />
     <Compile Include="DataBase\Utillities\Utillity.cs" />
+    <Compile Include="HumburgerMenu.xaml.cs">
+      <DependentUpon>HumburgerMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LoginWnd.xaml.cs">
       <DependentUpon>LoginWnd.xaml</DependentUpon>
     </Compile>
@@ -165,7 +172,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Sourse Images\test_logo.png" />
+    <SplashScreen Include="Sourse Images\test_logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -88,3 +88,6 @@ C:\Users\olegm\source\repos\Course-Project\Course Project Gym\bin\Debug\Controlz
 C:\Users\olegm\source\repos\Course-Project\Course Project Gym\bin\Debug\System.Windows.Interactivity.dll
 C:\Users\olegm\source\repos\Course-Project\Course Project Gym\bin\Debug\ControlzEx.pdb
 C:\Users\student\Desktop\Course\Course-Project\Course Project Gym\obj\Debug\Course Project Gym.csprojAssemblyReference.cache
+C:\Users\olegm\source\repos\Course-Project\Course Project Gym\obj\Debug\HumburgerMenu.g.cs
+C:\Users\olegm\source\repos\Course-Project\Course Project Gym\obj\Debug\HumburgerMenu.baml
+C:\Users\olegm\source\repos\Course-Project\Course Project Gym\obj\Debug\GeneratedInternalTypeHelper.g.cs

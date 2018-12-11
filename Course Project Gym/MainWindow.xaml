@@ -5,9 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Course_Project_Gym"
+        xmlns:local1="clr-namespace:HamburgerMenu"
         mc:Ignorable="d"
-        Title="Sportfit" Height="450" Width="800" Icon="Sourse Images/test_logo.png">
+        Title="Sportfit" Height="700" Width="1300" Icon="Sourse Images/test_logo.png" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <local1:HumburgerMenu x:Name="humbrgMenu"/>
     </Grid>
 </Window>
