@@ -90,7 +90,16 @@ C:\Users\olegm\source\repos\Course-Project\Course Project Gym\bin\Debug\Controlz
 C:\Users\olegm\source\repos\Course-Project\Course Project Gym\obj\Debug\HumburgerMenu.g.cs
 C:\Users\olegm\source\repos\Course-Project\Course Project Gym\obj\Debug\HumburgerMenu.baml
 C:\Users\olegm\source\repos\Course-Project\Course Project Gym\obj\Debug\GeneratedInternalTypeHelper.g.cs
+<<<<<<< HEAD
 C:\Users\student\Desktop\Course\Course-Project\Course Project Gym\obj\Debug\HumburgerMenu.g.cs
 C:\Users\student\Desktop\Course\Course-Project\Course Project Gym\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\student\Desktop\Course\Course-Project\Course Project Gym\obj\Debug\HumburgerMenu.baml
 C:\Users\student\Desktop\Course\Course-Project\Course Project Gym\obj\Debug\Course Project Gym.csprojAssemblyReference.cache
+=======
+C:\Users\yarik\Desktop\Project\Course-Project\Course Project Gym\obj\Debug\HumburgerMenu.g.cs
+C:\Users\yarik\Desktop\Project\Course-Project\Course Project Gym\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\yarik\Desktop\Project\Course-Project\Course Project Gym\bin\Debug\ControlzEx.dll
+C:\Users\yarik\Desktop\Project\Course-Project\Course Project Gym\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\yarik\Desktop\Project\Course-Project\Course Project Gym\bin\Debug\ControlzEx.pdb
+C:\Users\yarik\Desktop\Project\Course-Project\Course Project Gym\obj\Debug\HumburgerMenu.baml
+>>>>>>> 73e38799b6460987fe91940cc2ab6a55f6128f23
