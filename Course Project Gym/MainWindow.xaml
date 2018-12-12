@@ -29,44 +29,44 @@
         </Grid.Background>
         <WrapPanel Grid.Column="1" >
             <Grid>
-                <Rectangle Width="400" Height="500" Margin="10,80" RadiusX="15" RadiusY="15" Fill="White" Opacity="0.6">
+                <Rectangle Width="400" Height="600" Margin="10,30" RadiusX="15" RadiusY="15" Fill="White" Opacity="0.6">
                     <Rectangle.Effect>
                         <DropShadowEffect Color="#FF303030" RenderingBias="Quality" ShadowDepth="2" Opacity="0.2" />
                     </Rectangle.Effect>
                 </Rectangle>
-                <StackPanel Margin="30">
-                    <TextBlock Text="Last news" FontSize="40" Margin="5,50" FontWeight="DemiBold"/>
-                    <Rectangle RadiusX="15" RadiusY="15" Width="380" Height="250">
-                        <Rectangle.Fill>
-                            <ImageBrush x:Name="newsImg"/>
-                        </Rectangle.Fill>
-                    </Rectangle>
-                    <TextBlock x:Name="textNewsTbock" Text="..." FontSize="20" Height="120" Width="350" TextWrapping="Wrap"/>
-                </StackPanel>
+                <TextBlock Text="LAST NEWS" Opacity="0.5" FontSize="40" Margin="102,30,102,576" HorizontalAlignment="Center" FontWeight="DemiBold"/>
+                <ScrollViewer ScrollChanged="ScrollNews_ScrollChanged"  x:Name="ScrollNews" Width="380" Margin="20,98" VerticalScrollBarVisibility="Hidden" >
+                    <StackPanel  x:Name="NewsPanel" Width="343"/>
+                </ScrollViewer>
+                <Button x:Name="BottomArrowBtn" Click="BottomArrowBtn_Click" Height="50" Width="50" Background="LightGray" BorderBrush="LightGray"  VerticalAlignment="Bottom" Margin="15,0,15,100" Style="{StaticResource  MaterialDesignFloatingActionButton}">
+                    <materialDesign:PackIcon Kind="ArrowCollapseDown" Foreground="Black" Opacity="0.6" Width="20" Height="20"/>
+                </Button>
             </Grid>
+
             <Grid>
-                <Rectangle Width="400" Height="500" Margin="10,50" RadiusX="15" RadiusY="15" Fill="White" Opacity="0.6">
+                <Rectangle Width="400" Height="600" Margin="10,30" RadiusX="15" RadiusY="15" Fill="White" Opacity="0.6">
                     <Rectangle.Effect>
                         <DropShadowEffect Color="#FF303030" RenderingBias="Quality" ShadowDepth="2" Opacity="0.2" />
                     </Rectangle.Effect>
                 </Rectangle>
-                <StackPanel Margin="30">
-                    <TextBlock Text="Workout now" FontSize="40" Margin="5,50" FontWeight="DemiBold"/>
-                    <TextBlock x:Name="workoutTblock" Text="..." FontSize="35"/>
-                </StackPanel>
+                <TextBlock Text="GRAFIC TODAY" Opacity="0.5" FontSize="40" Margin="102,30,102,576" HorizontalAlignment="Center" FontWeight="DemiBold"/>
+                <ScrollViewer Width="380" Height="500" Margin="20,84,20,49" VerticalScrollBarVisibility="Auto">
+                    <StackPanel x:Name="WorksPanel" Width="343"/>
+                </ScrollViewer>
             </Grid>
+
             <Grid>
-                <Rectangle Width="400" Height="500" Margin="10,50" RadiusX="15" RadiusY="15" Fill="White" Opacity="0.6">
+                <Rectangle Width="400" Height="600" Margin="10,30" RadiusX="15" RadiusY="15" Fill="White" Opacity="0.6">
                     <Rectangle.Effect>
                         <DropShadowEffect Color="#FF303030" RenderingBias="Quality" ShadowDepth="2" Opacity="0.2" />
                     </Rectangle.Effect>
                 </Rectangle>
-                <StackPanel Margin="30">
-                    <TextBlock Text="Tasks" FontSize="40" Margin="5,50" FontWeight="DemiBold"/>
-                    <TextBlock x:Name="tasksTblock" Text="..." FontSize="35"/>
-                </StackPanel>
+                <TextBlock Text="TASKS" Opacity="0.5" FontSize="40" Margin="102,30,102,576" HorizontalAlignment="Center" FontWeight="DemiBold"/>
+                <ScrollViewer Width="380" Height="500" Margin="20,84,20,49" VerticalScrollBarVisibility="Auto">
+                    <StackPanel  x:Name="TaskPanel" Width="343"/>
+                </ScrollViewer>
             </Grid>
         </WrapPanel>
-        <local1:HumburgerMenu x:Name="humbrgMenu" Grid.ColumnSpan="2"/>
+        <local1:HumburgerMenu x:Name="humbrgMenu" Grid.ColumnSpan="2" />
     </Grid>
 </Window>

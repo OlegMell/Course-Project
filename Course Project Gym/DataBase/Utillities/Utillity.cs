@@ -33,6 +33,7 @@ namespace Course_Project_Gym.DataBase.Utillities
         }
         public string ByteToImage(Images img) //перевод байтов в картинку
         {
+           
             string fullFileName = img.Name + img.Extension;
             using (FileStream fs = new FileStream(fullFileName, FileMode.OpenOrCreate, FileAccess.Write, FileShare.ReadWrite))
             {

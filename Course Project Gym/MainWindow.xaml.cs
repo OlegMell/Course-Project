@@ -19,6 +19,7 @@ using Course_Project_Gym.DataBase;
 using Course_Project_Gym.DataBase.Repositories;
 using Course_Project_Gym.DataBase.Utillities;
 using HamburgerMenu;
+using System.Windows.Media.Animation;
 
 namespace Course_Project_Gym
 {
@@ -27,9 +28,9 @@ namespace Course_Project_Gym
     /// </summary>
     public partial class MainWindow : Window
     {
-        //public News LastNews { get; set; }
-
-        private News PreviousNews { get; set; } = new News();
+        private Uri PreviousImg { get; set; }
+        private string PreName = "";
+        private int NewsCount = 0;
 
         public MainWindow()
         {
@@ -42,23 +43,35 @@ namespace Course_Project_Gym
 
             timer.Tick += (s, r) =>
             {
-                var news = NewsRepository.GetInstance().GetLast();
-                if (news.Id != PreviousNews.Id)
+                var news = NewsRepository.GetInstance().GetAll();
+                if (NewsCount < news.Count())
                 {
-                    if (news.Image != null)
+                    NewsPanel.Children.Clear();
+                    foreach (var item in news)
                     {
-                        BitmapImage image = new BitmapImage(new Uri(System.IO.Path.GetFullPath(Utillity.GetInstance().ByteToImage(news.Image))));
-                        newsImg.ImageSource = image;
-                        textNewsTbock.Text = news.Name;
+                        BitmapImage image = new BitmapImage();
+                        if (item.Image != null)
+                        {
+                            if (!PreName.Equals(item.Image.Name))
+                            {
+                                image = new BitmapImage();
+                                Uri uri = new Uri(System.IO.Path.GetFullPath(Utillity.GetInstance().ByteToImage(item.Image)));
+                                image = new BitmapImage(uri);
+                                PreviousImg = uri;
+                            }
+                            else
+                            {
+                                image = new BitmapImage(PreviousImg);
+                            }
+
+                            NewsUc newsUc = new NewsUc();
+                            newsUc.ImgNews.ImageSource = image;
+                            newsUc.NewsName.Text = item.Name;
+                            NewsPanel.Children.Add(newsUc);
+                        }
+                        PreName = item.Image.Name;
                     }
-                    else
-                    {
-                        if (news.About.Length > 50)
-                            textNewsTbock.Text = news.About.Substring(0, 50);
-                        else
-                            textNewsTbock.Text = news.About;
-                    }
-                    PreviousNews = news;
+                    NewsCount = news.Count();
                 }
             };
             timer.Start();
@@ -69,10 +82,27 @@ namespace Course_Project_Gym
 
         private void ButtonMenu_Click(object sender, RoutedEventArgs e)
         {
-            if(humbrgMenu.StateClosed)
-                humbrgMenu.menuPanel.Visibility = Visibility.Collapsed;
-            else
-                humbrgMenu.menuPanel.Visibility = Visibility.Visible;
+            //...
+        }
+        
+        private void ScrollNews_ScrollChanged(object sender, ScrollChangedEventArgs e)
+        {
+            if ((sender as ScrollViewer).VerticalOffset > 0)
+            {
+                DoubleAnimation doubleAnimation = new DoubleAnimation {To = 0, Duration = TimeSpan.FromMilliseconds(100) };
+                BottomArrowBtn.BeginAnimation(HeightProperty, doubleAnimation);
+            }
+            if((sender as ScrollViewer).VerticalOffset == 0)
+            {
+                DoubleAnimation doubleAnimation = new DoubleAnimation { To = 50, Duration = TimeSpan.FromMilliseconds(100) };
+                BottomArrowBtn.BeginAnimation(HeightProperty, doubleAnimation);
+            }
+        }
+
+        private void BottomArrowBtn_Click(object sender, RoutedEventArgs e)
+        {
+           
+            ScrollNews.ScrollToEnd();
         }
     }
 }

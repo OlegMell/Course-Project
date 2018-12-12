@@ -220,15 +220,40 @@ namespace Course_Project_Gym.DataBase
                 #endregion
 
                 #region Инициализация Новостей
+                Images iMg = Utillity.GetInstance().ImageToByte("gym.jpg");
+
+                context.Entry(iMg).State = EntityState.Added;
+
                 News news = new News
                 {
                     Name = "Sale, sale, sale!!!",
                     About = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae vestibulum ex. Donec nec ipsum ac ligula pharetra convallis vel at purus. Fusce dignissim ultricies gravida. Duis risus mi, mollis sit amet pulvinar ut, dignissim vitae ex. Vestibulum placerat ligula at aliquam posuere. Nullam vel sagittis libero.",
                     Complex = complex,
                     DateNews = new DateTime(2018, 12, 05, 13, 11, 00),
-                    Image = Utillity.GetInstance().ImageToByte("gym.jpg")
+                    Image = iMg
                 };
                 context.Entry(news).State = EntityState.Added;
+
+                news = new News
+                {
+                    Name = "Sale, sale, sale!!!",
+                    About = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae vestibulum ex. Donec nec ipsum ac ligula pharetra convallis vel at purus. Fusce dignissim ultricies gravida. Duis risus mi, mollis sit amet pulvinar ut, dignissim vitae ex. Vestibulum placerat ligula at aliquam posuere. Nullam vel sagittis libero.",
+                    Complex = complex,
+                    DateNews = new DateTime(2018, 12, 05, 13, 11, 00),
+                    Image = iMg
+                };
+                context.Entry(news).State = EntityState.Added;
+
+                news = new News
+                {
+                    Name = "Sale, sale, sale!!!",
+                    About = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae vestibulum ex. Donec nec ipsum ac ligula pharetra convallis vel at purus. Fusce dignissim ultricies gravida. Duis risus mi, mollis sit amet pulvinar ut, dignissim vitae ex. Vestibulum placerat ligula at aliquam posuere. Nullam vel sagittis libero.",
+                    Complex = complex,
+                    DateNews = new DateTime(2018, 12, 05, 13, 11, 00),
+                    Image = iMg
+                };
+                context.Entry(news).State = EntityState.Added;
+
                 context.SaveChanges();
                 #endregion
 

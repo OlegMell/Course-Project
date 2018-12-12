@@ -48,7 +48,7 @@
         <Grid x:Name="GridMenu" HorizontalAlignment="Left" Width="50" Background="#FF2196F3">
             <StackPanel>
                 <Rectangle RadiusX="2" RadiusY="2" Height="50" Fill="#FFF44336"/>
-                <Rectangle x:Name="menuPanel" Visibility="{Binding StateClosed}" Margin="15,10" Fill="White" RadiusX="15" RadiusY="15" Height="362" Width="370"/>
+                <!--<Rectangle x:Name="menuPanel" Visibility="{Binding StateClosed}" Margin="15,10" Fill="White" RadiusX="15" RadiusY="15" Height="362" Width="370"/>-->
             </StackPanel>
             <Button x:Name="ButtonMenu" HorizontalAlignment="Right" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Width="50" Height="50" Click="ButtonMenu_Click">
                 <!--- -->
