@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -19,13 +21,32 @@ namespace HamburgerMenu
     /// <summary>
     /// Interaction logic for HumburgerMenu.xaml
     /// </summary>
-    public partial class HumburgerMenu : UserControl
+    public partial class HumburgerMenu : UserControl, INotifyPropertyChanged
     {
-        public bool StateClosed { get; set; } = true;
+        private bool stateClosed = true;
+        public bool StateClosed
+        {
+            get
+            {
+                return stateClosed;
+            }
+            set
+            {
+                stateClosed = value;
+                OnPropertyChanged("StateClosed");
+            }
+        }
 
         public HumburgerMenu()
         {
+            DataContext = this;
             InitializeComponent();
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        public void OnPropertyChanged([CallerMemberName]string prop = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
         }
 
         private void ButtonMenu_Click(object sender, RoutedEventArgs e)
@@ -43,5 +64,8 @@ namespace HamburgerMenu
 
             StateClosed = !StateClosed;
         }
+
+        
+
     }
 }

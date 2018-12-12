@@ -9,7 +9,7 @@ namespace Course_Project_Gym.DataBase
 {
     public class DBContext : DbContext 
     {
-        //static DBContext() => Database.SetInitializer(new DBInitializator());
+        static DBContext() => Database.SetInitializer(new DBInitializator());
 
         public DBContext() : base("myConnection") { }
 
@@ -22,11 +22,7 @@ namespace Course_Project_Gym.DataBase
         public DbSet<Complex> Complexes { get; set; }
         public DbSet<Images> Images { get; set; }
         public DbSet<News> News { get; set; }
-<<<<<<< HEAD
         public DbSet<Schedules> Schedules { get; set; }
-=======
-        public DbSet<Schedules> Schedules { get; set; } 
->>>>>>> 73e38799b6460987fe91940cc2ab6a55f6128f23
         public DbSet<Stocks> Stocks { get; set; }
         public DbSet<Streets> Streets { get; set; }
         public DbSet<StreetType> StreetTypes { get; set; }

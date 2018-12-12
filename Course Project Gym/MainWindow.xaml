@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:Course_Project_Gym"
         xmlns:local1="clr-namespace:HamburgerMenu"
         mc:Ignorable="d"
-        Title="Sportfit" Height="700" Width="1350" Icon="Sourse Images/test_logo.png" WindowStartupLocation="CenterScreen">
+        Title="Sportfit" Height="700" Width="1400" Icon="Sourse Images/test_logo.png" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="59*"/>
@@ -36,7 +36,12 @@
                 </Rectangle>
                 <StackPanel Margin="30">
                     <TextBlock Text="Last news" FontSize="40" Margin="5,50" FontWeight="DemiBold"/>
-                    <TextBlock x:Name="textNewsTbock" Text="..." FontSize="35"/>
+                    <Rectangle RadiusX="15" RadiusY="15" Width="380" Height="250">
+                        <Rectangle.Fill>
+                            <ImageBrush x:Name="newsImg"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <TextBlock x:Name="textNewsTbock" Text="..." FontSize="20" Height="120" Width="350" TextWrapping="Wrap"/>
                 </StackPanel>
             </Grid>
             <Grid>

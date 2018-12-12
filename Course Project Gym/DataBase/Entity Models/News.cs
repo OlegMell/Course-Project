@@ -14,5 +14,6 @@ namespace Course_Project_Gym.DataBase
         public string About { get; set; }
         public DateTime DateNews { get; set; }
         virtual public Complex Complex { get; set; }
+        virtual public Images Image { get; set; }
     }
 }

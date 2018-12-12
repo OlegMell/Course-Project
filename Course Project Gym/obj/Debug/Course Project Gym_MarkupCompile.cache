@@ -4,29 +4,17 @@
 winexe
 C#
 .cs
-<<<<<<< HEAD
-C:\Users\student\Desktop\Course\Course-Project\Course Project Gym\obj\Debug\
-=======
-C:\Users\yarik\Desktop\Project\Course-Project\Course Project Gym\obj\Debug\
->>>>>>> 73e38799b6460987fe91940cc2ab6a55f6128f23
+C:\Users\olegm\source\repos\Course-Project\Course Project Gym\obj\Debug\
 Course_Project_Gym
 none
 false
 DEBUG;TRACE
-<<<<<<< HEAD
-C:\Users\student\Desktop\Course\Course-Project\Course Project Gym\App.xaml
-31818045463
+C:\Users\olegm\source\repos\Course-Project\Course Project Gym\App.xaml
+4-212907225
 
-44-506718914
-211477601245
-=======
-C:\Users\yarik\Desktop\Project\Course-Project\Course Project Gym\App.xaml
-31818045463
-
-44-506718914
-21-614263465
->>>>>>> 73e38799b6460987fe91940cc2ab6a55f6128f23
-HumburgerMenu.xaml;LoginWnd.xaml;MainWindow.xaml;
+45819845634
+21-474017808
+Calendar.xaml;HumburgerMenu.xaml;LoginWnd.xaml;MainWindow.xaml;
 sourse images\test_logo.png
 False
 

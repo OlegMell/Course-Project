@@ -222,10 +222,11 @@ namespace Course_Project_Gym.DataBase
                 #region Инициализация Новостей
                 News news = new News
                 {
-                    Name = "News1",
-                    About = "About about about",
+                    Name = "Sale, sale, sale!!!",
+                    About = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae vestibulum ex. Donec nec ipsum ac ligula pharetra convallis vel at purus. Fusce dignissim ultricies gravida. Duis risus mi, mollis sit amet pulvinar ut, dignissim vitae ex. Vestibulum placerat ligula at aliquam posuere. Nullam vel sagittis libero.",
                     Complex = complex,
-                    DateNews = new DateTime(2018, 12, 05, 13, 11, 00)
+                    DateNews = new DateTime(2018, 12, 05, 13, 11, 00),
+                    Image = Utillity.GetInstance().ImageToByte("gym.jpg")
                 };
                 context.Entry(news).State = EntityState.Added;
                 context.SaveChanges();
