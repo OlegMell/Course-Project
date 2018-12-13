@@ -48,7 +48,6 @@ C:\Users\student\Desktop\Course\Course-Project\Course Project Gym\bin\Debug\Enti
 C:\Users\student\Desktop\Course\Course-Project\Course Project Gym\bin\Debug\MaterialDesignColors.pdb
 C:\Users\student\Desktop\Course\Course-Project\Course Project Gym\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\student\Desktop\Course\Course-Project\Course Project Gym\bin\Debug\MaterialDesignThemes.Wpf.xml
-C:\Users\student\Desktop\Course\Course-Project\Course Project Gym\obj\Debug\Course Project Gym.csprojAssemblyReference.cache
 C:\Users\student\Desktop\Course\Course-Project\Course Project Gym\obj\Debug\Calendar.g.cs
 C:\Users\student\Desktop\Course\Course-Project\Course Project Gym\obj\Debug\HumburgerMenu.g.cs
 C:\Users\student\Desktop\Course\Course-Project\Course Project Gym\obj\Debug\LoginWnd.g.cs
@@ -74,3 +73,6 @@ C:\Users\student\Desktop\Course\Course-Project\Course Project Gym\obj\Debug\News
 C:\Users\olegm\source\repos\Course-Project\Course Project Gym\obj\Debug\NewsUc.g.cs
 C:\Users\olegm\source\repos\Course-Project\Course Project Gym\obj\Debug\NewsUc.baml
 C:\Users\olegm\source\repos\Course-Project\Course Project Gym\obj\Debug\Course Project Gym.csprojAssemblyReference.cache
+C:\Users\student\Desktop\Course\Course-Project\Course Project Gym\obj\Debug\AddNewsPanelUc.g.cs
+C:\Users\student\Desktop\Course\Course-Project\Course Project Gym\obj\Debug\AddNewsPanelUc.baml
+C:\Users\student\Desktop\Course\Course-Project\Course Project Gym\obj\Debug\Course Project Gym.csprojAssemblyReference.cache

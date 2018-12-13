@@ -28,6 +28,7 @@ namespace Course_Project_Gym
     /// </summary>
     public partial class MainWindow : Window
     {
+        private AddNewsPanelUc addNews;
         private Uri PreviousImg { get; set; }
         private string PreName = "";
         private int NewsCount = 0;
@@ -49,6 +50,7 @@ namespace Course_Project_Gym
                     NewsPanel.Children.Clear();
                     foreach (var item in news)
                     {
+                        NewsUc newsUc = new NewsUc();
                         BitmapImage image = new BitmapImage();
                         if (item.Image != null)
                         {
@@ -63,12 +65,16 @@ namespace Course_Project_Gym
                             {
                                 image = new BitmapImage(PreviousImg);
                             }
-                            NewsUc newsUc = new NewsUc();
                             newsUc.ImgNews.ImageSource = image;
                             newsUc.NewsName.Text = item.Name;
-                            NewsPanel.Children.Add(newsUc);
+                            PreName = item.Image.Name;
                         }
-                        PreName = item.Image.Name;
+                        else
+                        {
+                            newsUc.NewsName.Text = item.Name;
+                            newsUc.FormForImg.Visibility = Visibility.Collapsed;
+                        }
+                        NewsPanel.Children.Add(newsUc);
                     }
                     NewsCount = news.Count();
                 }
@@ -116,33 +122,22 @@ namespace Course_Project_Gym
         {
             ScrollNews.ScrollToHome();
         }
-
-        private void NewsForm_GotFocus(object sender, RoutedEventArgs e)
-        {
-        }
-
-        private void NewsForm_LostFocus(object sender, RoutedEventArgs e)
-        {
-        }
-
-        private void ScrollNews_MouseEnter(object sender, MouseEventArgs e)
-        {
-            //BottomArrowBtn.Visibility = Visibility.Visible;
-        }
-
-        private void ScrollNews_MouseLeave(object sender, MouseEventArgs e)
-        {
-            //BottomArrowBtn.Visibility = Visibility.Hidden;
-        }
-
+        
         private void AddNewsBtn_Click(object sender, RoutedEventArgs e)
         {
-            ThicknessAnimation thickness = new ThicknessAnimation { To = new Thickness(10) };
-        }
+            addNews = new AddNewsPanelUc();
+            DoubleAnimation doubleAnimation;
 
-        private void AddImageInNews_Click(object sender, RoutedEventArgs e)
-        {
+            addNews.CloseAddNewsPanelBtn.Click += (s, ar) =>
+            {
+                doubleAnimation = new DoubleAnimation { To = 0, Duration = TimeSpan.FromMilliseconds(200) };
+                RightAddPanel.BeginAnimation(WidthProperty, doubleAnimation);
+            };
 
-        }
+            RightAddPanel.Children.Clear();
+            RightAddPanel.Children.Add(addNews);
+            doubleAnimation = new DoubleAnimation { To = 400, Duration = TimeSpan.FromMilliseconds(200) };
+            RightAddPanel.BeginAnimation(WidthProperty, doubleAnimation);
+        }        
     }
 }
