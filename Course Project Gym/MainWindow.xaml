@@ -27,23 +27,29 @@
                 <GradientStop Color="#FFF44336" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <WrapPanel Grid.Column="1" >
-            <Grid>
-                <Rectangle Width="400" Height="600" Margin="10,30" RadiusX="15" RadiusY="15" Fill="White" Opacity="0.6">
+        <WrapPanel Grid.Column="1">
+            <Grid Margin="-10">
+                <Rectangle x:Name="NewsForm" Width="400" Height="600" Margin="13,36,13,30" RadiusX="15" RadiusY="15" Fill="White" Opacity="0.6">
                     <Rectangle.Effect>
                         <DropShadowEffect Color="#FF303030" RenderingBias="Quality" ShadowDepth="2" Opacity="0.2" />
                     </Rectangle.Effect>
                 </Rectangle>
-                <TextBlock Text="LAST NEWS" Opacity="0.5" FontSize="40" Margin="102,30,102,576" HorizontalAlignment="Center" FontWeight="DemiBold"/>
-                <ScrollViewer ScrollChanged="ScrollNews_ScrollChanged"  x:Name="ScrollNews" Width="380" Margin="20,98" VerticalScrollBarVisibility="Hidden" >
+                <TextBlock Text="LAST NEWS" Opacity="0.5" FontSize="40" Margin="102,40,102,576" HorizontalAlignment="Center" FontWeight="DemiBold"/>
+                <ScrollViewer MouseEnter="ScrollNews_MouseEnter" MouseLeave="ScrollNews_MouseLeave" ScrollChanged="ScrollNews_ScrollChanged" x:Name="ScrollNews" Width="380" Height="470" Margin="15,98" VerticalScrollBarVisibility="Visible">
                     <StackPanel  x:Name="NewsPanel" Width="343"/>
                 </ScrollViewer>
-                <Button x:Name="BottomArrowBtn" Click="BottomArrowBtn_Click" Height="50" Width="50" Background="LightGray" BorderBrush="LightGray"  VerticalAlignment="Bottom" Margin="15,0,15,100" Style="{StaticResource  MaterialDesignFloatingActionButton}">
+                <Button x:Name="TopArrowBtn" Click="TopArrowBtn_Click" Height="30" Width="30" Background="LightGray" BorderBrush="LightGray" VerticalAlignment="Top" Margin="198,115,198,0" Style="{StaticResource  MaterialDesignFloatingActionButton}">
+                    <materialDesign:PackIcon Kind="ArrowCollapseUp" Foreground="Black" Opacity="0.6" Width="20" Height="20"/>
+                </Button>
+                <Button x:Name="BottomArrowBtn" Click="BottomArrowBtn_Click" Visibility="Hidden" Opacity="0.7" Height="30" Width="30" Background="LightGray" BorderBrush="LightGray"  VerticalAlignment="Bottom" Margin="15,0,15,115" Style="{StaticResource  MaterialDesignFloatingActionButton}">
                     <materialDesign:PackIcon Kind="ArrowCollapseDown" Foreground="Black" Opacity="0.6" Width="20" Height="20"/>
+                </Button>
+                <Button x:Name="AddNewsBtn" Click="AddNewsBtn_Click" Height="50" Width="50" Padding="0" Background="#FFF44336" BorderBrush="#FFF44336" VerticalAlignment="Bottom" Margin="15,0,15,40" Style="{StaticResource  MaterialDesignFloatingActionButton}">
+                    <materialDesign:PackIcon Kind="Plus" Foreground="White" Width="30" Height="30"/>
                 </Button>
             </Grid>
 
-            <Grid>
+            <Grid Margin="-10">
                 <Rectangle Width="400" Height="600" Margin="10,30" RadiusX="15" RadiusY="15" Fill="White" Opacity="0.6">
                     <Rectangle.Effect>
                         <DropShadowEffect Color="#FF303030" RenderingBias="Quality" ShadowDepth="2" Opacity="0.2" />
@@ -55,7 +61,7 @@
                 </ScrollViewer>
             </Grid>
 
-            <Grid>
+            <Grid Margin="-10">
                 <Rectangle Width="400" Height="600" Margin="10,30" RadiusX="15" RadiusY="15" Fill="White" Opacity="0.6">
                     <Rectangle.Effect>
                         <DropShadowEffect Color="#FF303030" RenderingBias="Quality" ShadowDepth="2" Opacity="0.2" />
@@ -67,6 +73,23 @@
                 </ScrollViewer>
             </Grid>
         </WrapPanel>
-        <local1:HumburgerMenu x:Name="humbrgMenu" Grid.ColumnSpan="2" />
+        <local1:HumburgerMenu x:Name="humbrgMenu" Grid.ColumnSpan="2"/>
+        <Grid x:Name="AddNewsPanel" Margin="1500,0,0,0" Width="500" Height="500">
+            <Grid.Background>
+                <LinearGradientBrush Opacity="0.7" EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF2196F3"/>
+                    <GradientStop Color="#FFF44336" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid.Effect>
+                <DropShadowEffect Opacity="0.5"/>
+            </Grid.Effect>
+            <TextBlock Text="ADD NEWS" FontSize="35" FontWeight="DemiBold" VerticalAlignment="top" HorizontalAlignment="Center"/>
+            <TextBox Height="65" VerticalAlignment="Top" Margin="10,80" materialDesign:HintAssist.Hint="Title" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+            <TextBox Height="200" VerticalAlignment="Top" Margin="10,170" materialDesign:HintAssist.Hint="About..." Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+            <Button x:Name="AddImageInNews" Click="AddImageInNews_Click" Width="80" Height="80" Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10,80,10,10">
+                <materialDesign:PackIcon Kind="Image" Foreground="Black" Width="30" Height="30"/>
+            </Button>
+        </Grid>
     </Grid>
 </Window>

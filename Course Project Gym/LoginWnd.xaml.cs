@@ -118,7 +118,7 @@ namespace Course_Project_Gym
         //    return Task.CompletedTask;
         //}
 
-        private void okRegBtn_Click(object sender, RoutedEventArgs e)
+        private void OkRegBtn_Click(object sender, RoutedEventArgs e)
         {
             Staff nStaff = new Staff
             {

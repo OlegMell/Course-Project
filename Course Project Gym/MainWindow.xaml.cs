@@ -63,7 +63,6 @@ namespace Course_Project_Gym
                             {
                                 image = new BitmapImage(PreviousImg);
                             }
-
                             NewsUc newsUc = new NewsUc();
                             newsUc.ImgNews.ImageSource = image;
                             newsUc.NewsName.Text = item.Name;
@@ -76,6 +75,7 @@ namespace Course_Project_Gym
             };
             timer.Start();
 
+            
             InitializeComponent();
             humbrgMenu.ButtonMenu.Click += ButtonMenu_Click;
         }
@@ -89,20 +89,60 @@ namespace Course_Project_Gym
         {
             if ((sender as ScrollViewer).VerticalOffset > 0)
             {
-                DoubleAnimation doubleAnimation = new DoubleAnimation {To = 0, Duration = TimeSpan.FromMilliseconds(100) };
-                BottomArrowBtn.BeginAnimation(HeightProperty, doubleAnimation);
+                DoubleAnimation doubleAnimation = new DoubleAnimation {To = 0, Duration = TimeSpan.FromMilliseconds(200) };
+                BottomArrowBtn.BeginAnimation(OpacityProperty, doubleAnimation);
+            }
+            if ((sender as ScrollViewer).VerticalOffset > 20)
+            {
+                DoubleAnimation doubleAnimation = new DoubleAnimation { To = 1, Duration = TimeSpan.FromMilliseconds(200) };
+                TopArrowBtn.BeginAnimation(OpacityProperty, doubleAnimation);
             }
             if((sender as ScrollViewer).VerticalOffset == 0)
             {
-                DoubleAnimation doubleAnimation = new DoubleAnimation { To = 50, Duration = TimeSpan.FromMilliseconds(100) };
-                BottomArrowBtn.BeginAnimation(HeightProperty, doubleAnimation);
+                DoubleAnimation doubleAnimation1 = new DoubleAnimation { To = 0, Duration = TimeSpan.FromMilliseconds(200) };
+                TopArrowBtn.BeginAnimation(OpacityProperty, doubleAnimation1);
+
+                DoubleAnimation doubleAnimation = new DoubleAnimation { To = 1, Duration = TimeSpan.FromMilliseconds(200) };
+                BottomArrowBtn.BeginAnimation(OpacityProperty, doubleAnimation);
             }
         }
 
         private void BottomArrowBtn_Click(object sender, RoutedEventArgs e)
         {
-           
-            ScrollNews.ScrollToEnd();
+           ScrollNews.ScrollToEnd();
+        }
+
+        private void TopArrowBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ScrollNews.ScrollToHome();
+        }
+
+        private void NewsForm_GotFocus(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void NewsForm_LostFocus(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void ScrollNews_MouseEnter(object sender, MouseEventArgs e)
+        {
+            //BottomArrowBtn.Visibility = Visibility.Visible;
+        }
+
+        private void ScrollNews_MouseLeave(object sender, MouseEventArgs e)
+        {
+            //BottomArrowBtn.Visibility = Visibility.Hidden;
+        }
+
+        private void AddNewsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ThicknessAnimation thickness = new ThicknessAnimation { To = new Thickness(10) };
+        }
+
+        private void AddImageInNews_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

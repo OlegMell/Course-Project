@@ -66,7 +66,7 @@
             <TextBox x:Name="emailRegTb" Text="test email" FontSize="19" Height="53" VerticalAlignment="Top" Margin="145.833,300,-29.167,0" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" RenderTransformOrigin="0.5,0.5"/>
             <PasswordBox x:Name="passRegTb" Password="test_pass" FontSize="19" Height="53" VerticalAlignment="Top" Margin="145.833,355,-29.167,0" materialDesign:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" RenderTransformOrigin="0.5,0.5"/>
             <ComboBox x:Name="workPlaceRegCb" SelectedIndex="0" FontSize="19" Margin="145.833,415,-29.167,0" VerticalAlignment="Top" Width="300" Height="50" materialDesign:HintAssist.Hint="Work place" Style="{StaticResource MaterialDesignFloatingHintComboBox}" RenderTransformOrigin="0.5,0.5"/>
-            <Button x:Name="okRegBtn" Click="okRegBtn_Click" Content="Ok" Margin="0,480,76,50" Width="100" Background="#f44336" BorderBrush="#f44336" Height="35" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right"/>
+            <Button x:Name="OkRegBtn" Click="OkRegBtn_Click" Content="Ok" Margin="0,480,76,50" Width="100" Background="#f44336" BorderBrush="#f44336" Height="35" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right"/>
         </Grid>
         <!--end-->
         
