@@ -76,3 +76,5 @@ C:\Users\olegm\source\repos\Course-Project\Course Project Gym\obj\Debug\Course P
 C:\Users\student\Desktop\Course\Course-Project\Course Project Gym\obj\Debug\AddNewsPanelUc.g.cs
 C:\Users\student\Desktop\Course\Course-Project\Course Project Gym\obj\Debug\AddNewsPanelUc.baml
 C:\Users\student\Desktop\Course\Course-Project\Course Project Gym\obj\Debug\Course Project Gym.csprojAssemblyReference.cache
+C:\Users\olegm\source\repos\Course-Project\Course Project Gym\obj\Debug\AddNewsPanelUc.g.cs
+C:\Users\olegm\source\repos\Course-Project\Course Project Gym\obj\Debug\AddNewsPanelUc.baml

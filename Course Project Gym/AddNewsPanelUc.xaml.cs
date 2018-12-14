@@ -29,21 +29,18 @@ namespace Course_Project_Gym
     {
         public event ClickHelper ClickAddBtnD;
         public News AddedNews { get; set; }
-        OpenFileDialog openFile;
-        public AddNewsPanelUc()
+        private OpenFileDialog openFile;
+        private Complex currComplex; 
+        public AddNewsPanelUc(Complex currentComplex)
         {
             InitializeComponent();
+            currComplex = currentComplex;
         }
 
         private void AddImageInNews_Click(object sender, RoutedEventArgs e)
         {
-            openFile = new OpenFileDialog
-            {
-                Filter = "Image(*.jpg)|*.jpg",
-                DefaultExt = "*.jpg",
-                CheckFileExists = true,
-                CheckPathExists = true
-            };
+            
+
         }
 
         private void AddFinallyBtn_Click(object sender, RoutedEventArgs e)
@@ -52,17 +49,35 @@ namespace Course_Project_Gym
             {
                 Name = NewsNameTb.Text,
                 About = NewsAboutTb.Text,
-                DateNews = DateTime.Now
+                DateNews = DateTime.Now,
+                Complex = currComplex
             };
 
             if (openFile != null)
             {
                 if (!openFile.FileName.Equals(string.Empty))
                 {
-                    AddedNews.Image = Utillity.GetInstance().ImageToByte(openFile.SafeFileName);
+                    AddedNews.Image = Utillity.GetInstance().ImageToByte(openFile.FileName);
                 }
             }
+
             NewsRepository.GetInstance().Add(AddedNews);
+        }
+
+        private void ImgSelectBtn_Click(object sender, RoutedEventArgs e)
+        {
+            openFile = new OpenFileDialog
+            {
+                Filter = "Image(*.jpg)|*.jpg",
+                DefaultExt = "*.jpg",
+                CheckFileExists = true,
+                CheckPathExists = true
+            };
+
+            if (openFile.ShowDialog() == DialogResult.OK)
+            {
+
+            }
         }
     }
 }

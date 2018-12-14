@@ -172,7 +172,24 @@ namespace Course_Project_Gym
                 {
                     if (account.Password.Equals(Utillity.GetInstance().GetHash(passBox.Password)))
                     {
-                        Main = new MainWindow();
+                        Complex cmpl = new Complex();
+
+                        var cmplx = ComplexRepository.GetInstance().GetAll();
+                        foreach (var item in cmplx)
+                        {
+                            var staff = item.Staffs.ToList();
+                            foreach (var s in staff)
+                            {
+                                if(s.Account.Login.Equals(account.Login))
+                                {
+                                    cmpl = item;
+                                    break;
+                                }
+                            }
+                        }
+
+                        Main = new MainWindow { CurrentComplex = cmpl};
+                        Main.StatusBar.Items.Add(new TextBlock { Text = $"{cmpl.Name + " " + cmpl.Address.City.Name + " " + cmpl.Address.Street.Name + " " + cmpl.Address.House}" });
                         Main.Show();
                         Close();
                     }
