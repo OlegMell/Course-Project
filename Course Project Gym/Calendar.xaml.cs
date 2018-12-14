@@ -24,5 +24,10 @@ namespace Course_Project_Gym
         {
             InitializeComponent();
         }
+
+        private void StackPanel_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }

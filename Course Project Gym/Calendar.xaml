@@ -3,8 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-             
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:Course_Project_Gym"
              mc:Ignorable="d" 
              d:DesignHeight="500" d:DesignWidth="500">
@@ -13,7 +12,7 @@
             <Button Margin="0,0,50,0">
                 <materialDesign:PackIcon Kind="ArrowLeft"/>
             </Button>
-            <TextBlock Text="December" FontSize="20" FontWeight="Bold" Foreground="White"/>
+            <TextBlock Text="Декабрь" FontSize="20" FontWeight="Bold" Foreground="White"/>
             <Button Margin="50,0,0,0">
                 <materialDesign:PackIcon Kind="ArrowRight"/>
             </Button>
@@ -31,7 +30,15 @@
             <Grid.RowDefinitions>
                 <RowDefinition/>
             </Grid.RowDefinitions>
+            <TextBlock Grid.Column="0" Foreground="White" FontSize="25" Grid.Row="0" HorizontalAlignment="Center" Text="Пн."/>
+            <TextBlock Grid.Column="1" Foreground="White" FontSize="25" Grid.Row="0" HorizontalAlignment="Center" Text="Вт."/>
+            <TextBlock Grid.Column="2" Foreground="White" FontSize="25" Grid.Row="0" HorizontalAlignment="Center" Text="Ср."/>
+            <TextBlock Grid.Column="3" Foreground="White" FontSize="25" Grid.Row="0" HorizontalAlignment="Center" Text="Чт."/>
+            <TextBlock Grid.Column="4" Foreground="White" FontSize="25" Grid.Row="0" HorizontalAlignment="Center" Text="Пт."/>
+            <TextBlock Grid.Column="5" Foreground="White" FontSize="25" Grid.Row="0" HorizontalAlignment="Center" Text="Сб."/>
+            <TextBlock Grid.Column="6" Foreground="White" FontSize="25" Grid.Row="0" HorizontalAlignment="Center" Text="Вс."/>
         </Grid>
+        
         <Grid Margin="0,10,0,0" Width="500" Height="400">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -49,6 +56,128 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
+            <StackPanel Grid.Column="0" Grid.Row="0" MouseDown="StackPanel_MouseDown">
+                <TextBlock Margin="20" Foreground="White" FontSize="25" HorizontalAlignment="Center" Text="1"/>
+            </StackPanel>
+            <StackPanel MouseDown="StackPanel_MouseDown" Grid.Column="1" Grid.Row="0">
+                <TextBlock Margin="20" Foreground="White" FontSize="25" HorizontalAlignment="Center" Text="2"/>
+            </StackPanel>
+            <StackPanel MouseDown="StackPanel_MouseDown" Grid.Column="2" Grid.Row="0">
+                <TextBlock Margin="20"  Foreground="White" FontSize="25"  HorizontalAlignment="Center" Text="3"/>
+
+            </StackPanel>
+            <StackPanel MouseDown="StackPanel_MouseDown" Grid.Column="3" Grid.Row="0">
+                <TextBlock Margin="20"  Foreground="White" FontSize="25"  HorizontalAlignment="Center" Text="4"/>
+
+            </StackPanel>
+            <StackPanel MouseDown="StackPanel_MouseDown" Grid.Column="4" Grid.Row="0">
+                <TextBlock Margin="20"  Foreground="White" FontSize="25" HorizontalAlignment="Center" Text="5"/>
+
+            </StackPanel>
+            <StackPanel MouseDown="StackPanel_MouseDown"  Grid.Column="5" Grid.Row="0">
+                <TextBlock Margin="20" Foreground="White" FontSize="25" HorizontalAlignment="Center" Text="6"/>
+
+            </StackPanel>
+            <StackPanel MouseDown="StackPanel_MouseDown" Grid.Column="6" Grid.Row="0">
+                <TextBlock Margin="20" Foreground="White" FontSize="25" HorizontalAlignment="Center" Text="7"/>
+
+            </StackPanel>
+            <StackPanel MouseDown="StackPanel_MouseDown" Grid.Column="0" Grid.Row="1">
+                <TextBlock Margin="20" Foreground="White" FontSize="25" HorizontalAlignment="Center" Text="8"/>
+
+            </StackPanel>
+            <StackPanel MouseDown="StackPanel_MouseDown" Grid.Column="1" Grid.Row="1">
+                <TextBlock Margin="20" Foreground="White" FontSize="25" HorizontalAlignment="Center" Text="9"/>
+
+            </StackPanel>
+            <StackPanel MouseDown="StackPanel_MouseDown" Grid.Column="2" Grid.Row="1">
+                <TextBlock Margin="20" Foreground="White" FontSize="25" HorizontalAlignment="Center" Text="10"/>
+
+            </StackPanel>
+            <StackPanel MouseDown="StackPanel_MouseDown" Grid.Column="3" Grid.Row="1">
+                <TextBlock Margin="20" Foreground="White" FontSize="25" HorizontalAlignment="Center" Text="11"/>
+
+            </StackPanel>
+            <StackPanel MouseDown="StackPanel_MouseDown" Grid.Column="4" Grid.Row="1">
+                <TextBlock Margin="20" Foreground="White" FontSize="25" HorizontalAlignment="Center" Text="12"/>
+
+            </StackPanel>
+            <StackPanel MouseDown="StackPanel_MouseDown" Grid.Column="5" Grid.Row="1">
+                <TextBlock Margin="20" Foreground="White" FontSize="25" HorizontalAlignment="Center" Text="13"/>
+
+            </StackPanel>
+            <StackPanel MouseDown="StackPanel_MouseDown" Grid.Column="6" Grid.Row="1">
+                <TextBlock Margin="20" Foreground="White" FontSize="25" HorizontalAlignment="Center" Text="14"/>
+
+            </StackPanel>
+            <StackPanel MouseDown="StackPanel_MouseDown" Grid.Column="0" Grid.Row="2">
+                <TextBlock Margin="20" Foreground="White" FontSize="25" HorizontalAlignment="Center" Text="15"/>
+
+            </StackPanel>
+            <StackPanel MouseDown="StackPanel_MouseDown" Grid.Column="1" Grid.Row="2">
+                <TextBlock Margin="20" Foreground="White" FontSize="25" HorizontalAlignment="Center" Text="16"/>
+
+            </StackPanel>
+            <StackPanel MouseDown="StackPanel_MouseDown" Grid.Column="2" Grid.Row="2">
+                <TextBlock Margin="20" Foreground="White" FontSize="25" HorizontalAlignment="Center" Text="17"/>
+
+            </StackPanel>
+            <StackPanel MouseDown="StackPanel_MouseDown" Grid.Column="3" Grid.Row="2">
+                <TextBlock Margin="20" Foreground="White" FontSize="25" HorizontalAlignment="Center" Text="18"/>
+
+            </StackPanel>
+            <StackPanel MouseDown="StackPanel_MouseDown" Grid.Column="4" Grid.Row="2">
+                <TextBlock Margin="20" Foreground="White" FontSize="25" HorizontalAlignment="Center" Text="19"/>
+
+            </StackPanel>
+            <StackPanel MouseDown="StackPanel_MouseDown" Grid.Column="5" Grid.Row="2">
+                <TextBlock Margin="20" Foreground="White" FontSize="25" HorizontalAlignment="Center" Text="20"/>
+
+            </StackPanel>
+            <StackPanel MouseDown="StackPanel_MouseDown" Grid.Column="6" Grid.Row="2">
+                <TextBlock Margin="20" Foreground="White" FontSize="25" HorizontalAlignment="Center" Text="21"/>
+
+            </StackPanel>
+            <StackPanel MouseDown="StackPanel_MouseDown" Grid.Column="0" Grid.Row="3">
+                <TextBlock Margin="20" Foreground="White" FontSize="25" HorizontalAlignment="Center" Text="22"/>
+
+            </StackPanel>
+            <StackPanel MouseDown="StackPanel_MouseDown" Grid.Column="1" Grid.Row="3">
+                <TextBlock Margin="20" Foreground="White" FontSize="25" HorizontalAlignment="Center" Text="23"/>
+
+            </StackPanel>
+            <StackPanel MouseDown="StackPanel_MouseDown" Grid.Column="2" Grid.Row="3">
+                <TextBlock Margin="20" Foreground="White" FontSize="25" HorizontalAlignment="Center" Text="24"/>
+
+            </StackPanel>
+            <StackPanel MouseDown="StackPanel_MouseDown" Grid.Column="3" Grid.Row="3">
+                <TextBlock Margin="20" Foreground="White" FontSize="25" HorizontalAlignment="Center" Text="25"/>
+
+            </StackPanel>
+            <StackPanel MouseDown="StackPanel_MouseDown" Grid.Column="4" Grid.Row="3">
+                <TextBlock Margin="20" Foreground="White" FontSize="25" HorizontalAlignment="Center" Text="26"/>
+
+            </StackPanel>
+            <StackPanel MouseDown="StackPanel_MouseDown" Grid.Column="5" Grid.Row="3">
+                <TextBlock Margin="20" Foreground="White" FontSize="25" HorizontalAlignment="Center" Text="27"/>
+
+            </StackPanel>
+            <StackPanel MouseDown="StackPanel_MouseDown" Grid.Column="6" Grid.Row="3">
+                <TextBlock Margin="20" Foreground="White" FontSize="25" HorizontalAlignment="Center" Text="28"/>
+
+            </StackPanel>
+            <StackPanel MouseDown="StackPanel_MouseDown" Grid.Column="0" Grid.Row="4">
+                <TextBlock Margin="20" Foreground="White" FontSize="25" HorizontalAlignment="Center" Text="29"/>
+
+            </StackPanel>
+            <StackPanel MouseDown="StackPanel_MouseDown" Grid.Column="1" Grid.Row="4">
+                <TextBlock Margin="20" Foreground="White" FontSize="25" HorizontalAlignment="Center" Text="30"/>
+
+            </StackPanel>
+            <StackPanel MouseDown="StackPanel_MouseDown" Grid.Column="2" Grid.Row="4">
+                <TextBlock Margin="20" Foreground="White" FontSize="25" HorizontalAlignment="Center" Text="31"/>
+
+            </StackPanel>
         </Grid>
     </StackPanel>
 </UserControl>
