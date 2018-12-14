@@ -73,7 +73,8 @@
                 </ScrollViewer>
             </Grid>
         </WrapPanel>
-        <Grid x:Name="RightAddPanel" Width="0" Visibility="Visible" Grid.Column="2" HorizontalAlignment="Right"/>
+        <Grid x:Name="RightAddPanel" Width="600" Height="0" Visibility="Visible" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <local1:HumburgerMenu x:Name="humbrgMenu" Grid.ColumnSpan="2"/>
+        <StatusBar x:Name="StatusBar" Grid.Column="1" VerticalAlignment="Bottom" Height="30" Background="{x:Null}" FontSize="15" Opacity="0.5"/>
     </Grid>
 </Window>

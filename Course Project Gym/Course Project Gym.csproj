@@ -99,6 +99,9 @@
     <Compile Include="DataBase\Repositories\StreetTypeRepository.cs" />
     <Compile Include="DataBase\Repositories\SubscriptionRepository.cs" />
     <Compile Include="DataBase\Repositories\SubscriptionTypeRepository.cs" />
+    <Compile Include="ScheduleOfOneUc.xaml.cs">
+      <DependentUpon>ScheduleOfOneUc.xaml</DependentUpon>
+    </Compile>
     <Page Include="AddNewsPanelUc.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -154,6 +157,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="NewsUc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ScheduleOfOneUc.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

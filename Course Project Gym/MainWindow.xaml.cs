@@ -32,6 +32,7 @@ namespace Course_Project_Gym
         private Uri PreviousImg { get; set; }
         private string PreName = "";
         private int NewsCount = 0;
+        public Complex CurrentComplex { get; set; }
 
         public MainWindow()
         {
@@ -65,6 +66,7 @@ namespace Course_Project_Gym
                             {
                                 image = new BitmapImage(PreviousImg);
                             }
+                            newsUc.FillialTb.Text = CurrentComplex.Name + " " + CurrentComplex.Address.City.Name + " " + CurrentComplex.Address.Street.Name + " " + CurrentComplex.Address.House; 
                             newsUc.ImgNews.ImageSource = image;
                             newsUc.NewsName.Text = item.Name;
                             PreName = item.Image.Name;
@@ -125,19 +127,25 @@ namespace Course_Project_Gym
         
         private void AddNewsBtn_Click(object sender, RoutedEventArgs e)
         {
-            addNews = new AddNewsPanelUc();
+            addNews = new AddNewsPanelUc(CurrentComplex);
             DoubleAnimation doubleAnimation;
 
             addNews.CloseAddNewsPanelBtn.Click += (s, ar) =>
             {
                 doubleAnimation = new DoubleAnimation { To = 0, Duration = TimeSpan.FromMilliseconds(200) };
-                RightAddPanel.BeginAnimation(WidthProperty, doubleAnimation);
+                RightAddPanel.BeginAnimation(HeightProperty, doubleAnimation);
+            };
+
+            addNews.AddFinallyBtn.Click += (s, ar) =>
+            {
+                doubleAnimation = new DoubleAnimation { To = 0, Duration = TimeSpan.FromMilliseconds(200) };
+                RightAddPanel.BeginAnimation(HeightProperty, doubleAnimation);
             };
 
             RightAddPanel.Children.Clear();
             RightAddPanel.Children.Add(addNews);
             doubleAnimation = new DoubleAnimation { To = 400, Duration = TimeSpan.FromMilliseconds(200) };
-            RightAddPanel.BeginAnimation(WidthProperty, doubleAnimation);
+            RightAddPanel.BeginAnimation(HeightProperty, doubleAnimation);
         }        
     }
 }

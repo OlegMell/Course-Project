@@ -76,6 +76,7 @@ C:\Users\olegm\source\repos\Course-Project\Course Project Gym\obj\Debug\Course P
 C:\Users\student\Desktop\Course\Course-Project\Course Project Gym\obj\Debug\AddNewsPanelUc.g.cs
 C:\Users\student\Desktop\Course\Course-Project\Course Project Gym\obj\Debug\AddNewsPanelUc.baml
 C:\Users\student\Desktop\Course\Course-Project\Course Project Gym\obj\Debug\Course Project Gym.csprojAssemblyReference.cache
+<<<<<<< HEAD
 C:\Users\yarik\Desktop\Project\Course-Project\Course Project Gym\bin\Debug\Course Project Gym.exe.config
 C:\Users\yarik\Desktop\Project\Course-Project\Course Project Gym\bin\Debug\Course Project Gym.exe
 C:\Users\yarik\Desktop\Project\Course-Project\Course Project Gym\bin\Debug\Course Project Gym.pdb
@@ -116,3 +117,8 @@ C:\Users\yarik\Desktop\Project\Course-Project\Course Project Gym\obj\Debug\Cours
 C:\Users\yarik\Desktop\Project\Course-Project\Course Project Gym\obj\Debug\Course Project Gym.csproj.CopyComplete
 C:\Users\yarik\Desktop\Project\Course-Project\Course Project Gym\obj\Debug\Course Project Gym.exe
 C:\Users\yarik\Desktop\Project\Course-Project\Course Project Gym\obj\Debug\Course Project Gym.pdb
+=======
+C:\Users\olegm\source\repos\Course-Project\Course Project Gym\obj\Debug\AddNewsPanelUc.g.cs
+C:\Users\olegm\source\repos\Course-Project\Course Project Gym\obj\Debug\AddNewsPanelUc.baml
+>>>>>>> 6b0d328cf3860d9101cb4d8c70d4c0f350089d3b
+C:\Users\yarik\Desktop\Project\Course-Project\Course Project Gym\obj\Debug\ScheduleOfOneUc.g.cs
