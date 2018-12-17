@@ -11,6 +11,7 @@ namespace Course_Project_Gym.DataBase
         public int Id { get; set; }
 
         public DateTime TimeStart { get; set; }
+        public DateTime Date { get; set; }
         public int Duration { get; set; }
         public Staff Coach { get; set; }
         public AdditionalServices Services { get; set; }

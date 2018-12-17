@@ -34,7 +34,11 @@
                         <DropShadowEffect Color="#FF303030" RenderingBias="Quality" ShadowDepth="2" Opacity="0.2" />
                     </Rectangle.Effect>
                 </Rectangle>
-                <TextBlock Text="LAST NEWS" Opacity="0.5" FontSize="40" Margin="102,40,102,576" HorizontalAlignment="Center" FontWeight="DemiBold"/>
+                <TextBox x:Name="SearchTb" TextChanged="SearchTb_TextChanged" LostFocus="SearchTb_LostFocus" Height="0" FontSize="20" FontWeight="DemiBold" VerticalAlignment="Top" Margin="50,35" materialDesign:HintAssist.Hint="Type something..." Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <Button x:Name="SearchBtn" Click="SearchBtn_Click" Width="50" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" Margin="0,45,30,0" HorizontalAlignment="Right">
+                    <materialDesign:PackIcon Kind="Search" Width="26" Height="26" Foreground="Black" Opacity="0.7"/>
+                </Button>
+                <TextBlock x:Name="TitleNewsTb" Text="LAST NEWS" Opacity="0.5" Height="50" FontSize="40" Margin="102,40,102,576" HorizontalAlignment="Center" FontWeight="DemiBold"/>
                 <ScrollViewer ScrollChanged="ScrollNews_ScrollChanged" x:Name="ScrollNews" Width="380" Height="470" Margin="15,98" VerticalScrollBarVisibility="Visible">
                     <StackPanel  x:Name="NewsPanel" Width="343"/>
                 </ScrollViewer>
@@ -75,6 +79,6 @@
         </WrapPanel>
         <Grid x:Name="RightAddPanel" Width="600" Height="0" Visibility="Visible" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <local1:HumburgerMenu x:Name="humbrgMenu" Grid.ColumnSpan="2"/>
-        <StatusBar x:Name="StatusBar" Grid.Column="1" VerticalAlignment="Bottom" Height="30" Background="{x:Null}" FontSize="15" Opacity="0.5"/>
+        <StatusBar x:Name="StatusBar" Grid.Column="1" HorizontalContentAlignment="Right" VerticalAlignment="Bottom" Height="30" Background="{x:Null}" FontSize="15" Opacity="0.5"/>
     </Grid>
 </Window>

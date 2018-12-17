@@ -1,0 +1,26 @@
+﻿<Window x:Class="Course_Project_Gym.AddWnd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Course_Project_Gym"
+        mc:Ignorable="d"
+        Title="Add" Height="400" Width="600">
+    <Grid x:Name="MainPanel">
+        <Rectangle RadiusX="15" RadiusY="15" Fill="White" Opacity="0.6">
+            <Rectangle.Effect>
+                <DropShadowEffect Color="#FF303030" RenderingBias="Quality" ShadowDepth="2" Opacity="0.2" />
+            </Rectangle.Effect>
+        </Rectangle>
+        <StackPanel Orientation="Horizontal" Height="80" VerticalAlignment="Top">
+            <TextBlock Text="ADD NEWS" FontSize="35" Margin="200,10,-10,0" FontWeight="DemiBold" VerticalAlignment="top" Opacity="0.7" Foreground="#FFF44336"  HorizontalAlignment="Center"/>
+            <Button x:Name="ImgSelectBtn" Click="ImgSelectBtn_Click" Width="50" Height="50" Margin="150,15,20,0" Background="#FFF44336" BorderBrush="#FFF44336" VerticalAlignment="Top" Style="{StaticResource  MaterialDesignFloatingActionButton}">
+                <materialDesign:PackIcon Kind="Image"/>
+            </Button>
+        </StackPanel>
+        <TextBox x:Name="NewsNameTb" Height="65" VerticalAlignment="Top" FontSize="20" Margin="10,80" materialDesign:HintAssist.Hint="Title" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+        <TextBox x:Name="NewsAboutTb" Height="115" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Margin="10,170,10,0" materialDesign:HintAssist.Hint="About..." Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+        <Button x:Name="AddFinallyBtn" Click="AddFinallyBtn_Click" Height="40" Background="#FFF44336" BorderBrush="#FFF44336" VerticalAlignment="Bottom" Width="100" Content="ADD" Margin="20"/>
+    </Grid>
+</Window>

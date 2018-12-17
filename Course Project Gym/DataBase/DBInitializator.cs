@@ -134,10 +134,9 @@ namespace Course_Project_Gym.DataBase
                     {
                         Login = "coach",
                         Password = "coach1"
-
                     },
-                    Complex = complex
-
+                    Complex = complex,
+                    ProfileImg = Utillity.GetInstance().ImageToByte(Path.GetFullPath("prof1.jpg"))
                 };
                 context.Entry(coach).State = EntityState.Added;
                 context.SaveChanges();
@@ -153,10 +152,9 @@ namespace Course_Project_Gym.DataBase
                     {
                         Login = "coach2",
                         Password = "coach2"
-
                     },
-                    Complex = complex
-
+                    Complex = complex,
+                    ProfileImg = Utillity.GetInstance().ImageToByte(Path.GetFullPath("prof.jpg"))
                 };
                 context.Entry(coach).State = EntityState.Added;
                 context.SaveChanges();
@@ -164,7 +162,6 @@ namespace Course_Project_Gym.DataBase
                 AdditionalServices additionalServices = new AdditionalServices
                 {
                     Name = "Pool"
-
                 };
                 context.Entry(additionalServices).State = EntityState.Added;
                 context.SaveChanges();
@@ -189,8 +186,34 @@ namespace Course_Project_Gym.DataBase
                 Schedules schedules = new Schedules
                 {
                     TimeStart = new DateTime(2018, 04, 12, 12, 10, 00),
+                    Date = DateTime.Now,
                     Duration = 1,
                     Coach = coach,
+                    Services = additionalServices
+                };
+                context.Entry(schedules).State = EntityState.Added;
+                context.SaveChanges();
+
+                schedules = new Schedules
+                {
+                    TimeStart = new DateTime(2018, 04, 12, 12, 10, 00),
+                    Date = DateTime.Now,
+                    Duration = 1,
+                    Coach = new Staff
+                    {
+                        Name = "Oleg",
+                        SurName = "Melnik",
+                        PhoneNumber = "0505555551",
+                        WorkExperience = 10,
+                        Position = position,
+                        Account = new Accounts
+                        {
+                            Login = "coach",
+                            Password = "coach1"
+                        },
+                        Complex = complex,
+                        ProfileImg = Utillity.GetInstance().ImageToByte(Path.GetFullPath("prof1.jpg"))
+                    },
                     Services = additionalServices
                 };
                 context.Entry(schedules).State = EntityState.Added;
@@ -226,7 +249,7 @@ namespace Course_Project_Gym.DataBase
 
                 News news = new News
                 {
-                    Name = "Sale, sale, sale!!!",
+                    Name = "gick pau",
                     About = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae vestibulum ex. Donec nec ipsum ac ligula pharetra convallis vel at purus. Fusce dignissim ultricies gravida. Duis risus mi, mollis sit amet pulvinar ut, dignissim vitae ex. Vestibulum placerat ligula at aliquam posuere. Nullam vel sagittis libero.",
                     Complex = complex,
                     DateNews = new DateTime(2018, 12, 05, 13, 11, 00),

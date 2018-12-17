@@ -17,5 +17,6 @@ namespace Course_Project_Gym.DataBase
         virtual public Position Position { get; set; }
         virtual public Accounts Account { get; set; }
         virtual public Complex Complex { get; set; }
+        virtual public Images ProfileImg { get; set; }
     }
 }
