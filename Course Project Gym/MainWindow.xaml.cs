@@ -23,7 +23,7 @@ namespace Course_Project_Gym
         private int NewsCount = 0;
         public Complex CurrentComplex { get; set; }
         private DispatcherTimer timer;
-        private bool IsSearchBarOpen {get;set;}
+        private bool IsSearchBarOpen { get; set; } = false;
 
         public MainWindow()
         {
@@ -138,15 +138,29 @@ namespace Course_Project_Gym
 
         private void SearchBtn_Click(object sender, RoutedEventArgs e)
         {
-            IsSearchBarOpen = !IsSearchBarOpen;
-            DoubleAnimation animation1 = new DoubleAnimation { To = 0, Duration = TimeSpan.FromMilliseconds(150) };
-            animation1.Completed += (s, ar) =>
+            if (!IsSearchBarOpen)
             {
-                DoubleAnimation animation2 = new DoubleAnimation { To = 60, Duration = TimeSpan.FromMilliseconds(100) };
-                SearchTb.BeginAnimation(HeightProperty, animation2);
-                SearchTb.Focus();
-            };
-            TitleNewsTb.BeginAnimation(HeightProperty, animation1);
+                DoubleAnimation animation1 = new DoubleAnimation { To = 0, Duration = TimeSpan.FromMilliseconds(150) };
+                animation1.Completed += (s, ar) =>
+                {
+                    DoubleAnimation animation2 = new DoubleAnimation { To = 60, Duration = TimeSpan.FromMilliseconds(100) };
+                    SearchTb.BeginAnimation(HeightProperty, animation2);
+                    SearchTb.Focus();
+                };
+                TitleNewsTb.BeginAnimation(HeightProperty, animation1);
+                IsSearchBarOpen = true;
+            }
+            else
+            {
+                DoubleAnimation animation1 = new DoubleAnimation { To = 0, Duration = TimeSpan.FromMilliseconds(150) };
+                animation1.Completed += (s, ar) =>
+                {
+                    DoubleAnimation animation2 = new DoubleAnimation { To = 60, Duration = TimeSpan.FromMilliseconds(100) };
+                    TitleNewsTb.BeginAnimation(HeightProperty, animation2);
+                };
+                SearchTb.BeginAnimation(HeightProperty, animation1);
+                IsSearchBarOpen = false;
+            }
         }
 
         private void SearchTb_LostFocus(object sender, RoutedEventArgs e)
