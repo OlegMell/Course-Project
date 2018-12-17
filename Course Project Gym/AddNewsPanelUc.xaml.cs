@@ -30,7 +30,7 @@ namespace Course_Project_Gym
         public event ClickHelper ClickAddBtnD;
         public News AddedNews { get; set; }
         OpenFileDialog openFile;
-        public AddNewsPanelUc()
+        public AddNewsPanelUc(Complex CurrentComplex)
         {
             InitializeComponent();
         }

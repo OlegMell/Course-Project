@@ -21,7 +21,7 @@
                 <materialDesign:PackIcon Kind="ArrowUp" Foreground="#FFF44336" Width="30" Height="30"/>
             </Button>
             <TextBlock Text="ADD NEWS" FontSize="35" Margin="100,10,0,0" FontWeight="DemiBold" VerticalAlignment="top" Opacity="0.7" Foreground="#FFF44336"  HorizontalAlignment="Center"/>
-            <Button x:Name="ImgSelectBtn" Click="ImgSelectBtn_Click"  Width="50" Height="50" Margin="150,15,10,0" Background="#FFF44336" BorderBrush="#FFF44336" VerticalAlignment="Top" Style="{StaticResource  MaterialDesignFloatingActionButton}">
+            <Button x:Name="ImgSelectBtn" Width="50" Height="50" Margin="150,15,10,0" Background="#FFF44336" BorderBrush="#FFF44336" VerticalAlignment="Top" Style="{StaticResource  MaterialDesignFloatingActionButton}">
                 <materialDesign:PackIcon Kind="Image"/>
             </Button>
         </StackPanel>

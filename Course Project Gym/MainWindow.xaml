@@ -58,7 +58,10 @@
                 <TextBlock Text="GRAFIC TODAY" Opacity="0.5" FontSize="40" Margin="102,30,102,576" HorizontalAlignment="Center" FontWeight="DemiBold"/>
                 <ScrollViewer Width="380" Height="500" Margin="20,84,20,49" VerticalScrollBarVisibility="Auto">
                     <StackPanel x:Name="WorksPanel" Width="343"/>
-                </ScrollViewer>
+                </ScrollViewer> 
+                <Button x:Name="AddGraficBtn" Click="AddGraficBtn_Click" Height="50" Width="50" Padding="0" Background="#FFF44336" BorderBrush="#FFF44336" VerticalAlignment="Bottom" Margin="15,0,15,40" Style="{StaticResource  MaterialDesignFloatingActionButton}">
+                    <materialDesign:PackIcon Kind="Plus" Foreground="White" Width="30" Height="30"/>
+                </Button>
             </Grid>
 
             <Grid Margin="-10">
@@ -71,6 +74,9 @@
                 <ScrollViewer Width="380" Height="500" Margin="20,84,20,49" VerticalScrollBarVisibility="Auto">
                     <StackPanel x:Name="TaskPanel" Width="343"/>
                 </ScrollViewer>
+                <Button x:Name="AddTasksBtn" Click="AddTasksBtn_Click" Height="50" Width="50" Padding="0" Background="#FFF44336" BorderBrush="#FFF44336" VerticalAlignment="Bottom" Margin="15,0,15,40" Style="{StaticResource  MaterialDesignFloatingActionButton}">
+                    <materialDesign:PackIcon Kind="Plus" Foreground="White" Width="30" Height="30"/>
+                </Button> 
             </Grid>
         </WrapPanel>
         <Grid x:Name="RightAddPanel" Width="600" Height="0" Visibility="Visible" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Top"/>

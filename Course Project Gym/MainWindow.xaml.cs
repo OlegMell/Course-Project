@@ -146,6 +146,16 @@ namespace Course_Project_Gym
             RightAddPanel.Children.Add(addNews);
             doubleAnimation = new DoubleAnimation { To = 400, Duration = TimeSpan.FromMilliseconds(200) };
             RightAddPanel.BeginAnimation(HeightProperty, doubleAnimation);
-        }        
+        }
+
+        private void AddGraficBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AddTasksBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
