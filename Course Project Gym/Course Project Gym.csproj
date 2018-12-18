@@ -76,8 +76,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AddNewsPanelUc.xaml.cs">
-      <DependentUpon>AddNewsPanelUc.xaml</DependentUpon>
+    <Compile Include="AddGraficWnd.xaml.cs">
+      <DependentUpon>AddGraficWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddWnd.xaml.cs">
+      <DependentUpon>AddWnd.xaml</DependentUpon>
     </Compile>
     <Compile Include="Calendar.xaml.cs">
       <DependentUpon>Calendar.xaml</DependentUpon>
@@ -102,7 +105,11 @@
     <Compile Include="ScheduleOfOneUc.xaml.cs">
       <DependentUpon>ScheduleOfOneUc.xaml</DependentUpon>
     </Compile>
-    <Page Include="AddNewsPanelUc.xaml">
+    <Page Include="AddGraficWnd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddWnd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

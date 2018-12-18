@@ -166,7 +166,6 @@ namespace Course_Project_Gym
             else
             {
                 AccountRepository accountRepository = AccountRepository.GetInstance();
-
                 var account = accountRepository.Get(emailTb.Text);
                 if (account != null)
                 {
@@ -189,7 +188,11 @@ namespace Course_Project_Gym
                         }
 
                         Main = new MainWindow { CurrentComplex = cmpl};
-                        Main.StatusBar.Items.Add(new TextBlock { Text = $"{cmpl.Name + " " + cmpl.Address.City.Name + " " + cmpl.Address.Street.Name + " " + cmpl.Address.House}" });
+                        Main.StatusBar.Items.Add(new TextBlock
+                        {
+                            Text = $"{cmpl.Name + " " + cmpl.Address.City.Name + " " + cmpl.Address.Street.Name + " " + cmpl.Address.House}",
+                            HorizontalAlignment = HorizontalAlignment.Right
+                        });
                         Main.Show();
                         Close();
                     }
