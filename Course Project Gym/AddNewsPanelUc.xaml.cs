@@ -24,10 +24,8 @@ namespace Course_Project_Gym
     /// Interaction logic for AddNewsPanelUc.xaml
     /// </summary>
 
-    public delegate void ClickHelper();
     public partial class AddNewsPanelUc : System.Windows.Controls.UserControl
     {
-        public event ClickHelper ClickAddBtnD;
         public News AddedNews { get; set; }
         OpenFileDialog openFile;
         public AddNewsPanelUc(Complex CurrentComplex)

@@ -293,6 +293,39 @@ namespace Course_Project_Gym.DataBase
                 context.Entry(stock).State = EntityState.Added;
                 context.SaveChanges();
                 #endregion
+
+                #region Инициализация Заметок
+                Tasks task1 = new Tasks
+                {
+                    Name = "Task1",
+                    About = "About About About About"
+
+                };
+
+                Tasks task2 = new Tasks
+                {
+                    Name = "Task2",
+                    About = "About About About About About HelloWorld"
+
+                };
+                Tasks task3 = new Tasks
+                {
+                    Name = "Task3",
+                    About = "About About About About About Hello"
+
+                };
+                Tasks task4 = new Tasks
+                {
+                    Name = "Task4",
+                    About = "About About About About About Oleg"
+
+                };
+                context.Entry(task1).State = EntityState.Added;
+                context.Entry(task2).State = EntityState.Added;
+                context.Entry(task3).State = EntityState.Added;
+                context.Entry(task4).State = EntityState.Added;
+                context.SaveChanges();
+                #endregion
                 //продолжить инициализацию...
             }
         }

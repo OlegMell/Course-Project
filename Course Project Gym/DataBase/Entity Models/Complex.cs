@@ -16,5 +16,6 @@ namespace Course_Project_Gym.DataBase
         virtual public ICollection<News> News { get; set; }
         virtual public ICollection<Images> Images { get; set; }
         virtual public ICollection<Staff> Staffs { get; set; }
+        virtual public ICollection<Tasks> Tasks { get; set; }
     }
 }

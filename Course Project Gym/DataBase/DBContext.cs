@@ -29,5 +29,6 @@ namespace Course_Project_Gym.DataBase
         public DbSet<Subscriptions> Subscriptions { get; set; }
         public DbSet<SubscriptionType> SubscriptionTypes { get; set; }
         public DbSet<Address> Addresses { get; set; }
+        public DbSet<Tasks> Tasks { get; set; }
     }
 }

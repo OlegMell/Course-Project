@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Course_Project_Gym"
              mc:Ignorable="d" d:DesignWidth="350" Height="168.5">
     <Grid Width="350">
-        <Border BorderThickness="0 1 0 0" BorderBrush="{DynamicResource MaterialDesignDivider}" Margin="0,0,0,33"/>
+        <Border BorderThickness="0 1 0 0" BorderBrush="{DynamicResource MaterialDesignDivider}" Margin="0,0,0,55"/>
         <StackPanel VerticalAlignment="Top" Orientation="Horizontal">
             <Ellipse Width="60" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,15">
                 <Ellipse.Fill>
@@ -17,9 +17,9 @@
         </StackPanel>
         <StackPanel Height="50" VerticalAlignment="Bottom" Orientation="Horizontal" Margin="0,0,0,0">
             <TextBlock Text="Time: " FontSize="20" Foreground="Red" FontWeight="DemiBold" Margin="30,0,0,0"/>
-            <TextBlock Text="10:10" x:Name="TimeStart" FontSize="20" Foreground="Red" FontWeight="DemiBold" Margin="0,0,40,0"/>
+            <TextBlock Text="10:10" x:Name="TimeStart" FontSize="20" Foreground="Red" FontWeight="DemiBold" Margin="0,0,40,10"/>
             <TextBlock Text="Duration: " FontSize="20" Foreground="Green" FontWeight="DemiBold" Margin="40,0,0,0"/>
-            <TextBlock Text="1.h" x:Name="Duration" FontSize="20" Foreground="Green" FontWeight="DemiBold"/>
+            <TextBlock Text="1.h" x:Name="Duration" FontSize="20" Foreground="Green" FontWeight="DemiBold" Margin="0,0,0,10"/>
         </StackPanel>
     </Grid>
 </UserControl>

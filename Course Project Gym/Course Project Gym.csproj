@@ -79,12 +79,16 @@
     <Compile Include="AddGraficWnd.xaml.cs">
       <DependentUpon>AddGraficWnd.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AddTasksWnd.xaml.cs">
+      <DependentUpon>AddTasksWnd.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AddWnd.xaml.cs">
       <DependentUpon>AddWnd.xaml</DependentUpon>
     </Compile>
     <Compile Include="Calendar.xaml.cs">
       <DependentUpon>Calendar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataBase\Entity Models\Tasks.cs" />
     <Compile Include="DataBase\Repositories\AccountRepository.cs" />
     <Compile Include="DataBase\Repositories\AdditionalServicesRepository.cs" />
     <Compile Include="DataBase\Repositories\AddressRepository.cs" />
@@ -102,10 +106,15 @@
     <Compile Include="DataBase\Repositories\StreetTypeRepository.cs" />
     <Compile Include="DataBase\Repositories\SubscriptionRepository.cs" />
     <Compile Include="DataBase\Repositories\SubscriptionTypeRepository.cs" />
+    <Compile Include="DataBase\Repositories\TasksRepository.cs" />
     <Compile Include="ScheduleOfOneUc.xaml.cs">
       <DependentUpon>ScheduleOfOneUc.xaml</DependentUpon>
     </Compile>
     <Page Include="AddGraficWnd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddTasksWnd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

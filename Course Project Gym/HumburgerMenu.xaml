@@ -45,15 +45,15 @@
         </Storyboard>
     </UserControl.Resources>
     <Grid>
-        <Grid x:Name="GridMenu" HorizontalAlignment="Left" Width="50" Background="#FF2196F3">
-            <StackPanel>
-                <Rectangle RadiusX="2" RadiusY="2" Height="50" Fill="#FFF44336"/>
+        <Grid x:Name="GridMenu" HorizontalAlignment="Left" Background="White" Opacity="0.4" Width="50">
+            <StackPanel VerticalAlignment="Bottom">
+                <Rectangle RadiusX="2" RadiusY="2" Height="50" Fill="white" Opacity="1"/>
                 <!--<Rectangle x:Name="menuPanel" Visibility="{Binding StateClosed}" Margin="15,10" Fill="White" RadiusX="15" RadiusY="15" Height="362" Width="370"/>-->
             </StackPanel>
             <Button x:Name="ButtonMenu" HorizontalAlignment="Right" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Width="50" Height="50" Click="ButtonMenu_Click">
                 <!--- -->
                 <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <Rectangle x:Name="rectangle" Width="30" Height="5" Margin="0 0 0 0" Fill="White" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="-0,0.5">
+                    <Rectangle x:Name="rectangle" Width="30" Height="5" Margin="0 0 0 0" Fill="gray" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="-0,0.5">
                         <Rectangle.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>
@@ -63,7 +63,7 @@
                             </TransformGroup>
                         </Rectangle.RenderTransform>
                     </Rectangle>
-                    <Rectangle x:Name="rectangle1" Width="30" Height="5" Margin="0 20 0 0 " Fill="White" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="-0,0.5">
+                    <Rectangle x:Name="rectangle1" Width="30" Height="5" Margin="0 20 0 0 " Fill="gray" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="-0,0.5">
                         <Rectangle.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>
@@ -73,7 +73,7 @@
                             </TransformGroup>
                         </Rectangle.RenderTransform>
                     </Rectangle>
-                    <Rectangle x:Name="rectangle2" Width="30" Height="5" Margin="0 10 0 0" Fill="White" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <Rectangle x:Name="rectangle2" Width="30" Height="5" Margin="0 10 0 0" Fill="gray" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                 </Grid>
             </Button>
         </Grid>

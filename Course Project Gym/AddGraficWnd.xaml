@@ -16,8 +16,17 @@
         <StackPanel Orientation="Horizontal" Height="80" VerticalAlignment="Top">
             <TextBlock Text="ADD GRAFIC" FontSize="35" Margin="200,10,-10,0" FontWeight="DemiBold" VerticalAlignment="top" Opacity="0.7" Foreground="#FFF44336"  HorizontalAlignment="Center"/>
         </StackPanel>
-        
-        <TextBox x:Name="NewsNameTb" Height="65" VerticalAlignment="Top" FontSize="20" Margin="10,80" materialDesign:HintAssist.Hint="Title" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+
+        <ComboBox x:Name="NewsNameCmb" Height="55" VerticalAlignment="Top" FontSize="20" Margin="10,80" materialDesign:HintAssist.Hint="Coach" Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image/>
+                        <TextBlock/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
         <TextBox x:Name="NewsAboutTb" Height="115" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Margin="10,170,10,0" materialDesign:HintAssist.Hint="About..." Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
         <Button x:Name="AddFinallyBtn" Click="AddFinallyBtn_Click" Height="40" Background="#FFF44336" BorderBrush="#FFF44336" VerticalAlignment="Bottom" Width="100" Content="ADD" Margin="20"/>
     </Grid>

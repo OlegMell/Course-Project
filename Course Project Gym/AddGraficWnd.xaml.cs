@@ -23,5 +23,10 @@ namespace Course_Project_Gym
         {
             InitializeComponent();
         }
+
+        private void AddFinallyBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
