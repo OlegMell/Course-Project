@@ -16,18 +16,33 @@
         <StackPanel Orientation="Horizontal" Height="80" VerticalAlignment="Top">
             <TextBlock Text="ADD GRAFIC" FontSize="35" Margin="200,10,-10,0" FontWeight="DemiBold" VerticalAlignment="top" Opacity="0.7" Foreground="#FFF44336"  HorizontalAlignment="Center"/>
         </StackPanel>
-
-        <ComboBox x:Name="NewsNameCmb" Height="55" VerticalAlignment="Top" FontSize="20" Margin="10,80" materialDesign:HintAssist.Hint="Coach" Style="{StaticResource MaterialDesignFloatingHintComboBox}">
-            <ComboBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
-                        <Image/>
-                        <TextBlock/>
-                    </StackPanel>
-                </DataTemplate>
-            </ComboBox.ItemTemplate>
-        </ComboBox>
-        <TextBox x:Name="NewsAboutTb" Height="115" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Margin="10,170,10,0" materialDesign:HintAssist.Hint="About..." Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+        <StackPanel Orientation="Horizontal">
+            <GroupBox Header="Set coach" Margin="10,80,10,102">
+                <StackPanel>
+                    <TextBox Margin="10,10,0,0" Width="300" FontSize="18" HorizontalAlignment="Left" materialDesign:HintAssist.Hint="Search.." Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    <ComboBox x:Name="NewsNameCmb" SelectionChanged="NewsNameCmb_SelectionChanged" ItemsSource="{Binding Coach}" Height="55" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="18" Margin="10,10,10,0" materialDesign:HintAssist.Hint="Coach" Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Ellipse Width="50" Height="50">
+                                        <Ellipse.Fill>
+                                            <ImageBrush ImageSource="{Binding ProfileImg}"/>
+                                        </Ellipse.Fill>
+                                    </Ellipse>
+                                    <TextBlock Text="{Binding Name}" Margin="10,0,0,0" FontSize="18"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Header="Set time" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="10,80,0,102" Width="212">
+                <StackPanel Orientation="Vertical">
+                    <ComboBox x:Name="Hours" Margin="10,0,10,0" Width="100" VerticalAlignment="Top" FontSize="18" materialDesign:HintAssist.Hint="Hour" Style="{StaticResource MaterialDesignFloatingHintComboBox}"/>
+                    <ComboBox x:Name="Minutes" Margin="3,20,0,0" Width="100" VerticalAlignment="Top" FontSize="18" materialDesign:HintAssist.Hint="Minutes" Style="{StaticResource MaterialDesignFloatingHintComboBox}"/>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
         <Button x:Name="AddFinallyBtn" Click="AddFinallyBtn_Click" Height="40" Background="#FFF44336" BorderBrush="#FFF44336" VerticalAlignment="Bottom" Width="100" Content="ADD" Margin="20"/>
     </Grid>
 </Window>

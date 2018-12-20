@@ -52,6 +52,7 @@
                         <materialDesign:PackIcon Kind="Plus" Foreground="White" Width="30" Height="30"/>
                     </Button>
                 </Grid>
+          
                 <Grid Margin="-10">
                     <Rectangle Width="400" Height="600" Margin="10,30" RadiusX="15" RadiusY="15" Fill="White" Opacity="0.6">
                         <Rectangle.Effect>
