@@ -44,3 +44,51 @@ C:\Users\yarik\Desktop\Project\Course-Project\Course Project Gym\obj\Debug\Cours
 C:\Users\yarik\Desktop\Project\Course-Project\Course Project Gym\obj\Debug\Course Project Gym.csproj.CopyComplete
 C:\Users\yarik\Desktop\Project\Course-Project\Course Project Gym\obj\Debug\Course Project Gym.exe
 C:\Users\yarik\Desktop\Project\Course-Project\Course Project Gym\obj\Debug\Course Project Gym.pdb
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\bin\Debug\Course Project Gym.exe.config
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\bin\Debug\Course Project Gym.exe
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\bin\Debug\Course Project Gym.pdb
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\bin\Debug\ControlzEx.dll
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\bin\Debug\EntityFramework.dll
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\bin\Debug\MaterialDesignColors.dll
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\bin\Debug\ControlzEx.pdb
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\bin\Debug\EntityFramework.xml
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\bin\Debug\MaterialDesignColors.pdb
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\Course Project Gym.csprojAssemblyReference.cache
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\AddGraficWnd.g.cs
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\AddTasksWnd.g.cs
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\AddWnd.g.cs
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\Calendar.g.cs
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\HumburgerMenu.g.cs
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\LoginWnd.g.cs
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\MainWindow.g.cs
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\NewsUc.g.cs
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\ScheduleOfOneUc.g.cs
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\App.g.cs
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\Course Project Gym_MarkupCompile.cache
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\Course Project Gym_MarkupCompile.lref
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\App.baml
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\AddGraficWnd.baml
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\AddTasksWnd.baml
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\AddWnd.baml
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\Calendar.baml
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\HumburgerMenu.baml
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\LoginWnd.baml
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\MainWindow.baml
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\NewsUc.baml
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\ScheduleOfOneUc.baml
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\Course Project Gym.g.resources
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\Course_Project_Gym.Properties.Resources.resources
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\Course Project Gym.csproj.GenerateResource.cache
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\Course Project Gym.csproj.CoreCompileInputs.cache
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\Course Project Gym.csproj.CopyComplete
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\Course Project Gym.exe
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\Course Project Gym.pdb
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\TaskUc.g.cs
+C:\Users\olegm\OneDrive\Рабочий стол\Project\Course-Project\Course Project Gym\obj\Debug\TaskUc.baml

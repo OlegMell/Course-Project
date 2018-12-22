@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="Course_Project_Gym.ServicesUc"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:Course_Project_Gym"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="350">
+    
+    <StackPanel>
+        <Grid>
+            <Border BorderThickness="0 1 0 0" BorderBrush="{DynamicResource MaterialDesignDivider}"/>
+            <ListView MouseDoubleClick="ListView_MouseDoubleClick" ItemsSource="{Binding}" Height="250">
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Name}" Header="Name" Width="80"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Surname}" Header="Surname" Width="80"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding PhoneNumber}" Header="PhoneNumber" Width="80"/>
+                </GridView>
+            </ListView>
+
+        </Grid>
+        <Button x:Name="AddBtn" Click="AddBtn_Click" Height="40" Background="#FFF44336" BorderBrush="#FFF44336" VerticalAlignment="Bottom" Width="100" Content="ADD" Margin="5"/>
+    </StackPanel>
+</UserControl>

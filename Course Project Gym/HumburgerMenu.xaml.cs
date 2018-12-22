@@ -23,8 +23,8 @@ namespace HamburgerMenu
     /// </summary>
     public partial class HumburgerMenu : UserControl, INotifyPropertyChanged
     {
-        private bool stateClosed = true;
-        public bool StateClosed
+        private Visibility stateClosed = Visibility.Collapsed;
+        public Visibility StateClosed
         {
             get
             {
@@ -51,21 +51,20 @@ namespace HamburgerMenu
 
         private void ButtonMenu_Click(object sender, RoutedEventArgs e)
         {
-            if (StateClosed)
+            if (StateClosed == Visibility.Collapsed)
             {
+                StateClosed = Visibility.Visible;
                 Storyboard sb = FindResource("OpenMenu") as Storyboard;
                 sb.Begin();
+                GridMenu.Opacity = 1;
             }
             else
             {
+                StateClosed = Visibility.Collapsed;
                 Storyboard sb = FindResource("CloseMenu") as Storyboard;
                 sb.Begin();
+                GridMenu.Opacity = 0.4;
             }
-
-            StateClosed = !StateClosed;
         }
-
-        
-
     }
 }

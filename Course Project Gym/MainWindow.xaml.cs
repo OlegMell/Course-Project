@@ -9,9 +9,10 @@ using Course_Project_Gym.DataBase.Repositories;
 using Course_Project_Gym.DataBase.Utillities;
 using System.Windows.Media.Animation;
 using System.Collections.Generic;
+using HamburgerMenu;
 
 namespace Course_Project_Gym
-{
+{ 
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -57,8 +58,22 @@ namespace Course_Project_Gym
                     WorksPanel.Children.Add(scheduleOfOne);
                 }
             }
-            
-            humbrgMenu.ButtonMenu.Click += ButtonMenu_Click;
+
+            SetTasks();
+        }
+
+        private void SetTasks()
+        {
+            TaskPanel.Children.Clear();
+            TaskUc taskUc;
+            foreach (var task in TasksRepository.GetInstance().GetAll())
+            {
+                taskUc = new TaskUc();
+                taskUc.TaskText.Text = task.About;
+                taskUc.TaskTitle.Text = task.Name;
+                taskUc.MainGrid.Background = task.BrushColor;
+                TaskPanel.Children.Add(taskUc);
+            }
         }
 
         private void SetNews(List<News> news)
@@ -93,19 +108,9 @@ namespace Course_Project_Gym
                 NewsPanel.Children.Add(newsUc);
             }
         }
-
-        private void ButtonMenu_Click(object sender, RoutedEventArgs e)
-        {
-            //...
-        }
         
-        private void ScrollNews_ScrollChanged(object sender, ScrollChangedEventArgs e)
+        private void ScrollNews_ScrollChanged(object sender, ScrollChangedEventArgs e) //скролл новостей
         {
-            if ((sender as ScrollViewer).VerticalOffset > 0)
-            {
-                DoubleAnimation doubleAnimation = new DoubleAnimation {To = 0, Duration = TimeSpan.FromMilliseconds(200) };
-                BottomArrowBtn.BeginAnimation(OpacityProperty, doubleAnimation);
-            }
             if ((sender as ScrollViewer).VerticalOffset > 20)
             {
                 DoubleAnimation doubleAnimation = new DoubleAnimation { To = 1, Duration = TimeSpan.FromMilliseconds(200) };
@@ -115,15 +120,7 @@ namespace Course_Project_Gym
             {
                 DoubleAnimation doubleAnimation1 = new DoubleAnimation { To = 0, Duration = TimeSpan.FromMilliseconds(200) };
                 TopArrowBtn.BeginAnimation(OpacityProperty, doubleAnimation1);
-
-                DoubleAnimation doubleAnimation = new DoubleAnimation { To = 1, Duration = TimeSpan.FromMilliseconds(200) };
-                BottomArrowBtn.BeginAnimation(OpacityProperty, doubleAnimation);
             }
-        }
-
-        private void BottomArrowBtn_Click(object sender, RoutedEventArgs e)
-        {
-           ScrollNews.ScrollToEnd();
         }
 
         private void TopArrowBtn_Click(object sender, RoutedEventArgs e)
@@ -205,7 +202,42 @@ namespace Course_Project_Gym
         private void AddTasksBtn_Click(object sender, RoutedEventArgs e)
         {
             addTask = new AddTasksWnd(CurrentComplex);
+            addTask.Closed += (s, ar) =>
+            {
+                if(addTask.IsAdded)
+                {
+                    SetTasks();
+                }
+            };
             addTask.ShowDialog();
+        }
+
+        private void ScrollWorks_ScrollChanged(object sender, ScrollChangedEventArgs e)
+        {
+            if ((sender as ScrollViewer).VerticalOffset > 20)
+            {
+                DoubleAnimation doubleAnimation = new DoubleAnimation { To = 1, Duration = TimeSpan.FromMilliseconds(200) };
+                ArrowUpWt.BeginAnimation(OpacityProperty, doubleAnimation);
+            }
+            if ((sender as ScrollViewer).VerticalOffset == 0)
+            {
+                DoubleAnimation doubleAnimation1 = new DoubleAnimation { To = 0, Duration = TimeSpan.FromMilliseconds(200) };
+                ArrowUpWt.BeginAnimation(OpacityProperty, doubleAnimation1);
+            }
+        }
+
+        private void ScrollTasks_ScrollChanged(object sender, ScrollChangedEventArgs e)
+        {
+            if ((sender as ScrollViewer).VerticalOffset > 20)
+            {
+                DoubleAnimation doubleAnimation = new DoubleAnimation { To = 1, Duration = TimeSpan.FromMilliseconds(200) };
+                TopArrowTasksBtn.BeginAnimation(OpacityProperty, doubleAnimation);
+            }
+            if ((sender as ScrollViewer).VerticalOffset == 0)
+            {
+                DoubleAnimation doubleAnimation1 = new DoubleAnimation { To = 0, Duration = TimeSpan.FromMilliseconds(200) };
+                TopArrowTasksBtn.BeginAnimation(OpacityProperty, doubleAnimation1);
+            }
         }
     }
 }

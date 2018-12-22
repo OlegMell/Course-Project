@@ -35,13 +35,9 @@ namespace Course_Project_Gym
             InitializeComponent();
         }
 
-        private  void TestConnection()
+        private void TestConnection()
         {
-            //Task.Run(new Action(() =>
-            //{
-                AccountRepository.GetInstance().Get(1);
-            //}));
-           // SignInBtn.IsEnabled = enterLogBtn.IsEnabled = true;
+            AccountRepository.GetInstance().Get(1);
         }
 
         private void CloseSignInPanel()
@@ -62,7 +58,7 @@ namespace Course_Project_Gym
 
         private void EnterLogBtn_Click(object sender, RoutedEventArgs e)
         {
-             OpenDashboard();
+            OpenDashboard();
         } //Вход пользователя
 
         private void SingInBtn_Click(object sender, RoutedEventArgs e)
@@ -107,17 +103,6 @@ namespace Course_Project_Gym
 
         } //открытие панели регистрации
 
-        //public async void Set()
-        //{
-        //    await Task.Run(Setter);
-        //}
-
-        //public Task Setter()
-        //{
-           
-        //    return Task.CompletedTask;
-        //}
-
         private void OkRegBtn_Click(object sender, RoutedEventArgs e)
         {
             Staff nStaff = new Staff
@@ -141,7 +126,7 @@ namespace Course_Project_Gym
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.Key.Equals(Key.Enter))
+            if (e.Key.Equals(Key.Enter))
             {
                 OpenDashboard();
             }
@@ -179,7 +164,7 @@ namespace Course_Project_Gym
                             var staff = item.Staffs.ToList();
                             foreach (var s in staff)
                             {
-                                if(s.Account.Login.Equals(account.Login))
+                                if (s.Account.Login.Equals(account.Login))
                                 {
                                     cmpl = item;
                                     break;
@@ -187,11 +172,12 @@ namespace Course_Project_Gym
                             }
                         }
 
-                        Main = new MainWindow { CurrentComplex = cmpl};
+                        Main = new MainWindow { CurrentComplex = cmpl };
                         Main.StatusBar.Items.Add(new TextBlock
                         {
                             Text = $"{cmpl.Name + " " + cmpl.Address.City.Name + " " + cmpl.Address.Street.Name + " " + cmpl.Address.House}",
-                            HorizontalAlignment = HorizontalAlignment.Right
+                            HorizontalAlignment = HorizontalAlignment.Right,
+                            Margin = new Thickness(500, 0, 0, 0)
                         });
                         Main.Show();
                         Close();

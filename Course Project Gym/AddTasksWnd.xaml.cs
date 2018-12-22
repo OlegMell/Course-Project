@@ -23,9 +23,11 @@ namespace Course_Project_Gym
     public partial class AddTasksWnd : Window
     {
         public TasksRepository TaskRep { get; set; } = TasksRepository.GetInstance();
-        private OpenFileDialog openFile;
         private Complex CurrenComplex;
         public Tasks NewTasks { get; set; }
+        private System.Windows.Controls.Button colorBtn;
+        public bool IsAdded { get; set; }
+
 
         public AddTasksWnd(Complex complex)
         {
@@ -42,15 +44,25 @@ namespace Course_Project_Gym
                     Name = TasksNameTb.Text,
                     About = TasksAboutTb.Text
                 };
-
                 
+                if(colorBtn != null)
+                {
+                    NewTasks.ColorName = colorBtn.DataContext.ToString();
+                }
             }
             else
             {
                 return;
             }
             TaskRep.Add(NewTasks);
+            IsAdded = true;
             Close();
+        }
+
+        private void ColorBtn_Click(object sender, RoutedEventArgs e)
+        {
+            colorBtn = new System.Windows.Controls.Button();
+            colorBtn = (sender as System.Windows.Controls.Button);
         }
     }
 }

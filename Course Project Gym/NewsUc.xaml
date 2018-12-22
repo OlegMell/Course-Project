@@ -9,7 +9,7 @@
     <Grid>
         <Border BorderThickness="0 1 0 0" BorderBrush="{DynamicResource MaterialDesignDivider}"/>
         <TextBlock x:Name="FillialTb" FontSize="10" VerticalAlignment="Top" TextAlignment="Center" Margin="4"  Opacity="0.6"/>
-        <Rectangle x:Name="FormForImg" Visibility="Collapsed" Margin="10,20" VerticalAlignment="Top" Height="200" RadiusX="15" RadiusY="15" >
+        <Rectangle x:Name="FormForImg" Visibility="Visible" Margin="10,20" VerticalAlignment="Top" Height="200" RadiusX="15" RadiusY="15" >
             <Rectangle.Fill>
                 <ImageBrush x:Name="ImgNews"/>
             </Rectangle.Fill>

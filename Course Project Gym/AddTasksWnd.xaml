@@ -6,7 +6,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Course_Project_Gym"
         mc:Ignorable="d"
-        Title="Add" Height="400" Width="600">
+        Title="Add" Height="500" Width="600">
     <Grid x:Name="MainPanel">
         <Rectangle RadiusX="15" RadiusY="15" Fill="White" Opacity="0.6">
             <Rectangle.Effect>
@@ -16,9 +16,13 @@
         <StackPanel Orientation="Horizontal" Height="80" VerticalAlignment="Top">
             <TextBlock Text="ADD TASK" FontSize="35" Margin="200,10,-10,0" FontWeight="DemiBold" VerticalAlignment="top" Opacity="0.7" Foreground="#FFF44336"  HorizontalAlignment="Center"/>
         </StackPanel>
-
         <TextBox x:Name="TasksNameTb" Height="65" VerticalAlignment="Top" FontSize="20" Margin="10,80" materialDesign:HintAssist.Hint="Title" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
         <TextBox x:Name="TasksAboutTb" Height="115" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Margin="10,170,10,0" materialDesign:HintAssist.Hint="About..." Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Height="64" Margin="0,0,0,81">
+            <Button Margin="226,10,10,10" Click="ColorBtn_Click" Height="30" Width="30" Background="#FFF44336" DataContext="#FFF44336"  BorderBrush="#FFF44336" VerticalAlignment="Center" Style="{StaticResource  MaterialDesignFloatingActionButton}"/>
+            <Button Margin="10" Click="ColorBtn_Click" Height="30" Width="30" Background="LightGreen" DataContext="LightGreen" BorderBrush="LightGreen" VerticalAlignment="Center" Style="{StaticResource  MaterialDesignFloatingActionButton}"/>
+            <Button Margin="10" Click="ColorBtn_Click" Height="30" Width="30" Background="LightYellow" DataContext="LightYellow" BorderBrush="LightYellow" VerticalAlignment="Center" Style="{StaticResource  MaterialDesignFloatingActionButton}"/>
+        </StackPanel>
         <Button x:Name="AddFinallyBtn" Click="AddFinallyBtn_Click" Height="40" Background="#FFF44336" BorderBrush="#FFF44336" VerticalAlignment="Bottom" Width="100" Content="ADD" Margin="20"/>
     </Grid>
 </Window>
