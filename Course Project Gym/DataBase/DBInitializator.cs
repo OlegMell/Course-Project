@@ -161,9 +161,43 @@ namespace Course_Project_Gym.DataBase
 
                 AdditionalServices additionalServices = new AdditionalServices
                 {
-                    Name = "Pool"
+                    Name = "Pool",
+                    Price = 150
                 };
+                AdditionalServices additionalServices1 = new AdditionalServices
+                {
+                    Name = "Yoga",
+                    Price= 150
+                };
+                AdditionalServices additionalServices2 = new AdditionalServices
+                {
+                    Name = "Fitnes",
+                    Price = 150
+
+                };
+                AdditionalServices additionalServices3 = new AdditionalServices
+                {
+                    Name="SPA",
+                    Price = 150
+                };
+                AdditionalServices additionalServices4 = new AdditionalServices
+                {
+                    Name = "Sauna",
+                    Price = 250
+                };
+                AdditionalServices additionalServices5 = new AdditionalServices
+                {
+                    Name = "Pilates",
+                    Price = 255
+                };
+
                 context.Entry(additionalServices).State = EntityState.Added;
+                context.Entry(additionalServices1).State = EntityState.Added;
+                context.Entry(additionalServices2).State = EntityState.Added;
+                context.Entry(additionalServices3).State = EntityState.Added;
+                context.Entry(additionalServices4).State = EntityState.Added;
+                context.Entry(additionalServices5).State = EntityState.Added;
+
                 context.SaveChanges();
 
                 SubscriptionType subscriptionType = new SubscriptionType

@@ -55,6 +55,7 @@ namespace Course_Project_Gym.DataBase.Repositories
             if (additional != null)
             {
                 additional.Name = item.Name;
+                additional.Price = item.Price;
                 additional.Subscriptions = item.Subscriptions;
                 additional.Complexes = item.Complexes;
 

@@ -144,3 +144,6 @@ C:\Users\olegm\source\repos\Course-Project\Course Project Gym\obj\Debug\Course_P
 C:\Users\olegm\source\repos\Course-Project\Course Project Gym\obj\Debug\Course Project Gym.csproj.GenerateResource.cache
 C:\Users\olegm\source\repos\Course-Project\Course Project Gym\obj\Debug\Course Project Gym.csproj.CoreCompileInputs.cache
 C:\Users\olegm\source\repos\Course-Project\Course Project Gym\obj\Debug\Course Project Gym.csproj.CopyComplete
+C:\Users\yarik\Desktop\Project\Course-Project\Course Project Gym\obj\Debug\ClinetsUc.g.cs
+C:\Users\yarik\Desktop\Project\Course-Project\Course Project Gym\obj\Debug\ServicesUc.g.cs
+C:\Users\yarik\Desktop\Project\Course-Project\Course Project Gym\obj\Debug\TaskUc.g.cs

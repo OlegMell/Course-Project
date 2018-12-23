@@ -11,15 +11,14 @@
     <StackPanel>
         <Grid>
             <Border BorderThickness="0 1 0 0" BorderBrush="{DynamicResource MaterialDesignDivider}"/>
-            <ListView ItemsSource="{Binding}" Height="250">
+            <ListView ItemsSource="{Binding Services}" Height="250">
                 <GridView>
-                    <GridViewColumn DisplayMemberBinding="{Binding Name}" Header="Name" Width="80"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Surname}" Header="Surname" Width="80"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding PhoneNumber}" Header="PhoneNumber" Width="80"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Name}" Header="Name" Width="180"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Price}" Header="Price" Width="80"/>
                 </GridView>
             </ListView>
 
         </Grid>
-        <Button x:Name="AddBtn" Click="AddBtn_Click" Height="40" Background="#FFF44336" BorderBrush="#FFF44336" VerticalAlignment="Bottom" Width="100" Content="ADD" Margin="5"/>
+        <Button x:Name="AddBtn" Click="AddBtn_Click" Height="40" Background="#FFF44336" BorderBrush="#FFF44336" VerticalAlignment="Bottom" Width="100" Content="ADD NEW" Margin="5"/>
     </StackPanel>
 </UserControl>

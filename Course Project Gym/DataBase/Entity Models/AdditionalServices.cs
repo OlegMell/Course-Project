@@ -11,6 +11,7 @@ namespace Course_Project_Gym.DataBase
         public int Id { get; set; }
 
         public string Name { get; set; }
+        public float Price { get; set; }
         public ICollection<Complex> Complexes { get; set; }
         public ICollection<Subscriptions> Subscriptions { get; set; }
     }
