@@ -27,70 +27,84 @@
                 <GradientStop Color="#FFF44336" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <WrapPanel x:Name="WrapPanel" Grid.Column="1">
-            <Grid Margin="15,-10,-10,0">
-                <Rectangle x:Name="NewsForm" Width="400" Height="600" Margin="13,45,13,30" RadiusX="15" RadiusY="15" Fill="White" Opacity="0.6">
-                    <Rectangle.Effect>
-                        <DropShadowEffect Color="#FF303030" RenderingBias="Quality" ShadowDepth="2" Opacity="0.2" />
-                    </Rectangle.Effect>
-                </Rectangle>
-                <TextBox x:Name="SearchTb" TextChanged="SearchTb_TextChanged" LostFocus="SearchTb_LostFocus" Height="0" FontSize="20" FontWeight="DemiBold" VerticalAlignment="Top" Margin="50,35" materialDesign:HintAssist.Hint="Type something..." Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-                <Button x:Name="SearchBtn" Click="SearchBtn_Click" Width="50" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" Margin="0,50,30,0" HorizontalAlignment="Right">
-                    <materialDesign:PackIcon Kind="Search" Width="26" Height="26" Foreground="Black" Opacity="0.7"/>
-                </Button>
-                <TextBlock x:Name="TitleNewsTb" Text="LAST NEWS" Opacity="0.5" Height="50" FontSize="40" Margin="102,40,102,576" HorizontalAlignment="Center" FontWeight="DemiBold"/>
-                <ScrollViewer ScrollChanged="ScrollNews_ScrollChanged" x:Name="ScrollNews" Width="380" Height="470" Margin="15,98" VerticalScrollBarVisibility="Visible">
-                    <StackPanel  x:Name="NewsPanel" Width="343"/>
-                </ScrollViewer>
-                <Button x:Name="TopArrowBtn" Click="TopArrowBtn_Click" Height="30" Width="30" Background="LightGray" BorderBrush="LightGray" VerticalAlignment="Top" Margin="198,115,198,0" Style="{StaticResource  MaterialDesignFloatingActionButton}">
-                    <materialDesign:PackIcon Kind="ArrowCollapseUp" Foreground="Black" Opacity="0.6" Width="20" Height="20"/>
-                </Button>
-                <Button x:Name="BottomArrowBtn" Click="BottomArrowBtn_Click" Visibility="Hidden" Opacity="0.7" Height="30" Width="30" Background="LightGray" BorderBrush="LightGray"  VerticalAlignment="Bottom" Margin="15,0,15,115" Style="{StaticResource  MaterialDesignFloatingActionButton}">
-                    <materialDesign:PackIcon Kind="ArrowCollapseDown" Foreground="Black" Opacity="0.6" Width="20" Height="20"/>
-                </Button>
-                <Button x:Name="AddNewsBtn" Click="AddNewsBtn_Click" Height="50" Width="50" Padding="0" Background="#FFF44336" BorderBrush="#FFF44336" VerticalAlignment="Bottom" Margin="15,0,15,40" Style="{StaticResource  MaterialDesignFloatingActionButton}">
-                    <materialDesign:PackIcon Kind="Plus" Foreground="White" Width="30" Height="30"/>
-                </Button>
-            </Grid>
+        <Grid x:Name="MainGrid" Grid.Column="1">
+            <WrapPanel x:Name="WrapPanel" Grid.Column="1">
+                <Grid Margin="15,-10,-10,0">
+                    <Rectangle x:Name="NewsForm" Width="400" Height="600" Margin="13,45,13,30" RadiusX="15" RadiusY="15" Fill="White" Opacity="0.6">
+                        <Rectangle.Effect>
+                            <DropShadowEffect Color="#FF303030" RenderingBias="Quality" ShadowDepth="2" Opacity="0.2" />
+                        </Rectangle.Effect>
+                    </Rectangle>
+                    <TextBox x:Name="SearchTb" TextChanged="SearchTb_TextChanged" LostFocus="SearchTb_LostFocus" Height="0" FontSize="20" FontWeight="DemiBold" VerticalAlignment="Top" Margin="50,35" materialDesign:HintAssist.Hint="Type something..." Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    <Button x:Name="SearchBtn" Click="SearchBtn_Click" Width="50" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" Margin="0,50,30,0" HorizontalAlignment="Right">
+                        <materialDesign:PackIcon Kind="Search" Width="26" Height="26" Foreground="Black" Opacity="0.7"/>
+                    </Button>
+                    <TextBlock x:Name="TitleNewsTb" Text="LAST NEWS" Opacity="0.5" Height="50" FontSize="40" Margin="102,40,102,576" HorizontalAlignment="Center" FontWeight="DemiBold"/>
+                    <ScrollViewer ScrollChanged="ScrollNews_ScrollChanged" x:Name="ScrollNews" Width="380" Height="470" Margin="15,98" VerticalScrollBarVisibility="Visible">
+                        <StackPanel  x:Name="NewsPanel" Width="343"/>
+                    </ScrollViewer>
+                    <Button x:Name="TopArrowBtn" Click="TopArrowBtn_Click" Height="30" Width="30" Background="LightGray" BorderBrush="LightGray" VerticalAlignment="Top" Margin="198,115,198,0" Style="{StaticResource  MaterialDesignFloatingActionButton}">
+                        <materialDesign:PackIcon Kind="ArrowCollapseUp" Foreground="Black" Opacity="0.6" Width="20" Height="20"/>
+                    </Button>
+                    <Button x:Name="AddNewsBtn" Click="AddNewsBtn_Click" Height="50" Width="50" Padding="0" Background="#FFF44336" BorderBrush="#FFF44336" VerticalAlignment="Bottom" Margin="15,0,15,40" Style="{StaticResource  MaterialDesignFloatingActionButton}">
+                        <materialDesign:PackIcon Kind="Plus" Foreground="White" Width="30" Height="30"/>
+                    </Button>
+                </Grid>
 
-            <Grid Margin="-10">
-                <Rectangle Width="400" Height="600" Margin="13,36,13,30" RadiusX="15" RadiusY="15" Fill="White" Opacity="0.6">
-                    <Rectangle.Effect>
-                        <DropShadowEffect Color="#FF303030" RenderingBias="Quality" ShadowDepth="2" Opacity="0.2" />
-                    </Rectangle.Effect>
-                </Rectangle>
-                <TextBlock Text="Works Today" Opacity="0.5" FontSize="40" Margin="102,45,102,576" HorizontalAlignment="Center" FontWeight="DemiBold"/>
-                <ScrollViewer x:Name="WorksScroll" ScrollChanged="ScrollWorks_ScrollChanged" Width="380" Height="470" Margin="15,98" VerticalScrollBarVisibility="Visible">
-                    <StackPanel  x:Name="WorksPanel" Width="343"/>
-                </ScrollViewer>
-                <Button x:Name="ArrowUpWt" Click="TopArrowBtn_Click" Height="30" Width="30" Background="LightGray" BorderBrush="LightGray" VerticalAlignment="Top" Margin="198,115,198,0" Style="{StaticResource  MaterialDesignFloatingActionButton}">
-                    <materialDesign:PackIcon Kind="ArrowCollapseUp" Foreground="Black" Opacity="0.6" Width="20" Height="20"/>
-                </Button>
-                <Button x:Name="AddGraficBtn" Click="AddGraficBtn_Click" Height="50" Width="50" Padding="0" Background="#FFF44336" BorderBrush="#FFF44336" VerticalAlignment="Bottom" Margin="15,0,15,50" Style="{StaticResource  MaterialDesignFloatingActionButton}">
-                    <materialDesign:PackIcon Kind="Plus" Foreground="White" Width="30" Height="30"/>
-                </Button>
-            </Grid>
+                <Grid Margin="-10">
+                    <Rectangle Width="400" Height="600" Margin="13,36,13,30" RadiusX="15" RadiusY="15" Fill="White" Opacity="0.6">
+                        <Rectangle.Effect>
+                            <DropShadowEffect Color="#FF303030" RenderingBias="Quality" ShadowDepth="2" Opacity="0.2" />
+                        </Rectangle.Effect>
+                    </Rectangle>
+                    <TextBlock Text="Works Today" Opacity="0.5" FontSize="40" Margin="102,45,102,576" HorizontalAlignment="Center" FontWeight="DemiBold"/>
+                    <ScrollViewer x:Name="WorksScroll" ScrollChanged="ScrollWorks_ScrollChanged" Width="380" Height="470" Margin="15,98" VerticalScrollBarVisibility="Visible">
+                        <StackPanel  x:Name="WorksPanel" Width="343"/>
+                    </ScrollViewer>
+                    <Button x:Name="ArrowUpWt" Click="TopArrowBtn_Click" Height="30" Width="30" Background="LightGray" BorderBrush="LightGray" VerticalAlignment="Top" Margin="198,115,198,0" Style="{StaticResource  MaterialDesignFloatingActionButton}">
+                        <materialDesign:PackIcon Kind="ArrowCollapseUp" Foreground="Black" Opacity="0.6" Width="20" Height="20"/>
+                    </Button>
+                    <Button x:Name="AddGraficBtn" Click="AddGraficBtn_Click" Height="50" Width="50" Padding="0" Background="#FFF44336" BorderBrush="#FFF44336" VerticalAlignment="Bottom" Margin="15,0,15,50" Style="{StaticResource  MaterialDesignFloatingActionButton}">
+                        <materialDesign:PackIcon Kind="Plus" Foreground="White" Width="30" Height="30"/>
+                    </Button>
+                </Grid>
 
-            <Grid Margin="-10">
-                <Rectangle Width="400" Height="600" Margin="13,36,13,30" RadiusX="15" RadiusY="15" Fill="White" Opacity="0.6">
-                    <Rectangle.Effect>
-                        <DropShadowEffect Color="#FF303030" RenderingBias="Quality" ShadowDepth="2" Opacity="0.2" />
-                    </Rectangle.Effect>
-                </Rectangle>
-                <TextBlock Text="Tasks" Opacity="0.5" FontSize="40" Margin="102,45,102,576" HorizontalAlignment="Center" FontWeight="DemiBold"/>
-                <ScrollViewer ScrollChanged="ScrollTasks_ScrollChanged" x:Name="ScrollTask" Width="380" Height="470" Margin="15,98" VerticalScrollBarVisibility="Visible">
-                    <StackPanel  x:Name="TaskPanel" Width="343"/>
-                </ScrollViewer>
-                <Button x:Name="TopArrowTasksBtn" Click="TopArrowBtn_Click" Height="30" Width="30" Background="LightGray" BorderBrush="LightGray" VerticalAlignment="Top" Margin="198,115,198,0" Style="{StaticResource  MaterialDesignFloatingActionButton}">
-                    <materialDesign:PackIcon Kind="ArrowCollapseUp" Foreground="Black" Opacity="0.6" Width="20" Height="20"/>
-                </Button>
-                <Button x:Name="AddTasksBtn" Click="AddTasksBtn_Click" Height="50" Width="50" Padding="0" Background="#FFF44336" BorderBrush="#FFF44336" VerticalAlignment="Bottom" Margin="15,0,15,50" Style="{StaticResource  MaterialDesignFloatingActionButton}">
-                    <materialDesign:PackIcon Kind="Plus" Foreground="White" Width="30" Height="30"/>
-                </Button>
-            </Grid>
-        </WrapPanel>
-        <Grid x:Name="RightAddPanel" Width="600" Height="0" Visibility="Visible" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <Grid Margin="-10">
+                    <Rectangle Width="400" Height="600" Margin="13,36,13,30" RadiusX="15" RadiusY="15" Fill="White" Opacity="0.6">
+                        <Rectangle.Effect>
+                            <DropShadowEffect Color="#FF303030" RenderingBias="Quality" ShadowDepth="2" Opacity="0.2" />
+                        </Rectangle.Effect>
+                    </Rectangle>
+                    <TextBlock Text="Tasks" Opacity="0.5" FontSize="40" Margin="102,45,102,576" HorizontalAlignment="Center" FontWeight="DemiBold"/>
+                    <ScrollViewer ScrollChanged="ScrollTasks_ScrollChanged" x:Name="ScrollTask" Width="380" Height="470" Margin="15,98" VerticalScrollBarVisibility="Visible">
+                        <StackPanel  x:Name="TaskPanel" Width="343"/>
+                    </ScrollViewer>
+                    <Button x:Name="TopArrowTasksBtn" Click="TopArrowBtn_Click" Height="30" Width="30" Background="LightGray" BorderBrush="LightGray" VerticalAlignment="Top" Margin="198,115,198,0" Style="{StaticResource  MaterialDesignFloatingActionButton}">
+                        <materialDesign:PackIcon Kind="ArrowCollapseUp" Foreground="Black" Opacity="0.6" Width="20" Height="20"/>
+                    </Button>
+                    <Button x:Name="AddTasksBtn" Click="AddTasksBtn_Click" Height="50" Width="50" Padding="0" Background="#FFF44336" BorderBrush="#FFF44336" VerticalAlignment="Bottom" Margin="15,0,15,50" Style="{StaticResource  MaterialDesignFloatingActionButton}">
+                        <materialDesign:PackIcon Kind="Plus" Foreground="White" Width="30" Height="30"/>
+                    </Button>
+                </Grid>
+            </WrapPanel>
+            <StatusBar x:Name="StatusBar" Grid.Column="1" HorizontalContentAlignment="Right" VerticalAlignment="Bottom" Height="30" Background="{x:Null}" FontSize="15" Opacity="0.5"/>
+        </Grid>
+        <Grid x:Name="RightPanelGrid" Grid.Column="1" Margin="1500,0,0,0" Width="1000">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.3">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform Angle="-40" CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FF2196F3"/>
+                    <GradientStop Color="#FFF44336" Offset="1"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+        </Grid>
         <local1:HumburgerMenu x:Name="humbrgMenu" Grid.ColumnSpan="2"/>
-        <StatusBar x:Name="StatusBar" Grid.Column="1" HorizontalContentAlignment="Right" VerticalAlignment="Bottom" Height="30" Background="{x:Null}" FontSize="15" Opacity="0.5"/>
     </Grid>
 </Window>

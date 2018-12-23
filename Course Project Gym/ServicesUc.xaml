@@ -11,7 +11,7 @@
     <StackPanel>
         <Grid>
             <Border BorderThickness="0 1 0 0" BorderBrush="{DynamicResource MaterialDesignDivider}"/>
-            <ListView MouseDoubleClick="ListView_MouseDoubleClick" ItemsSource="{Binding}" Height="250">
+            <ListView ItemsSource="{Binding}" Height="250">
                 <GridView>
                     <GridViewColumn DisplayMemberBinding="{Binding Name}" Header="Name" Width="80"/>
                     <GridViewColumn DisplayMemberBinding="{Binding Surname}" Header="Surname" Width="80"/>

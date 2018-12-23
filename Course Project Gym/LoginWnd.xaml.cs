@@ -35,10 +35,7 @@ namespace Course_Project_Gym
             InitializeComponent();
         }
 
-        private void TestConnection()
-        {
-            AccountRepository.GetInstance().Get(1);
-        }
+        private void TestConnection() => AccountRepository.GetInstance().Get(1);
 
         private void CloseSignInPanel()
         {
@@ -51,15 +48,9 @@ namespace Course_Project_Gym
             SignInBtn.Content = "Sing In";
         } //анимация закрытия окна регистрации
 
-        private void PowerBtn_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
-        } //закрытие окна
+        private void PowerBtn_Click(object sender, RoutedEventArgs e) => Close(); //закрытие окна
 
-        private void EnterLogBtn_Click(object sender, RoutedEventArgs e)
-        {
-            OpenDashboard();
-        } //Вход пользователя
+        private void EnterLogBtn_Click(object sender, RoutedEventArgs e) => OpenDashboard(); //Вход пользователя
 
         private void SingInBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -79,8 +70,6 @@ namespace Course_Project_Gym
                 CloseSignInPanel();
             }
             #endregion
-
-            //Set();
 
             var complexes = ComplexRepository.GetInstance().GetAll();
             var positions = PositionRepository.GetInstance().GetAll();
