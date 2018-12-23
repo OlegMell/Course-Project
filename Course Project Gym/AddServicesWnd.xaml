@@ -3,10 +3,18 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Course_Project_Gym"
         mc:Ignorable="d"
-        Title="AddServicesWnd" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Add" Height="400" Width="600">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal" Height="80" VerticalAlignment="Top">
+            <TextBlock Text="ADD SERVICES" FontSize="35" Margin="200,10,-10,0" FontWeight="DemiBold" VerticalAlignment="top" Opacity="0.7" Foreground="#FFF44336"  HorizontalAlignment="Center"/>
+        </StackPanel>
+        <StackPanel>
+            <TextBox x:Name="ServicesNameTb" Margin="5" Height="50" FontSize="20" materialDesign:HintAssist.Hint="Name" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+            <TextBox x:Name="ServicesPriceTb" Height="50" Margin="5,30,5,0" TextWrapping="Wrap" FontSize="20" materialDesign:HintAssist.Hint="Price" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+        </StackPanel>
+        <Button x:Name="AddFinallyBtn" Click="AddFinallyBtn_Click" Height="40" Background="#FFF44336" BorderBrush="#FFF44336" VerticalAlignment="Bottom" Width="100" Content="ADD" Margin="80"/>
+    </StackPanel>
 </Window>

@@ -76,8 +76,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddClientWnd.xaml.cs">
+      <DependentUpon>AddClientWnd.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AddGraficWnd.xaml.cs">
       <DependentUpon>AddGraficWnd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddServicesWnd.xaml.cs">
+      <DependentUpon>AddServicesWnd.xaml</DependentUpon>
     </Compile>
     <Compile Include="AddTasksWnd.xaml.cs">
       <DependentUpon>AddTasksWnd.xaml</DependentUpon>
@@ -88,8 +94,8 @@
     <Compile Include="Calendar.xaml.cs">
       <DependentUpon>Calendar.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ClinetsUc.xaml.cs">
-      <DependentUpon>ClinetsUc.xaml</DependentUpon>
+    <Compile Include="ClientsWnd.xaml.cs">
+      <DependentUpon>ClientsWnd.xaml</DependentUpon>
     </Compile>
     <Compile Include="DataBase\Entity Models\Tasks.cs" />
     <Compile Include="DataBase\Repositories\AccountRepository.cs" />
@@ -119,7 +125,15 @@
     <Compile Include="TaskUc.xaml.cs">
       <DependentUpon>TaskUc.xaml</DependentUpon>
     </Compile>
+    <Page Include="AddClientWnd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AddGraficWnd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddServicesWnd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -135,7 +149,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ClinetsUc.xaml">
+    <Page Include="ClientsWnd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -27,7 +27,8 @@ namespace Course_Project_Gym
 
         private void AddBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            AddServicesWnd addServicesWnd = new AddServicesWnd();
+            addServicesWnd.ShowDialog();
         }
     }
 }

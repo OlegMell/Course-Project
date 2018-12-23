@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Course_Project_Gym
 {
     /// <summary>
-    /// Interaction logic for ClinetsUc.xaml
+    /// Interaction logic for ClientsWnd.xaml
     /// </summary>
-    public partial class ClinetsUc : UserControl
+    public partial class ClientsWnd : Window
     {
-        public ClinetsUc()
+        public ClientsWnd()
         {
             InitializeComponent();
         }
@@ -32,7 +31,8 @@ namespace Course_Project_Gym
 
         private void AddBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            AddClientWnd addClientWnd = new AddClientWnd();
+            addClientWnd.ShowDialog();
         }
     }
 }
