@@ -21,13 +21,12 @@ namespace Course_Project_Gym
     /// </summary>
     public partial class AddClientWnd : Window
     {
-        public ClientsRepository ClientRep { get; set; }
+        //public ClientsRepository ClientRep { get; set; }
         public Clients NewClients { get; set; }
         public bool IsAdded { get; set; }
         public AddClientWnd()
         {
             InitializeComponent();
-
         }
 
         private void AddFinallyBtn_Click(object sender, RoutedEventArgs e)
@@ -45,7 +44,7 @@ namespace Course_Project_Gym
             {
                 return;
             }
-            ClientRep.Add(NewClients);
+            ClientsRepository.GetInstance().Add(NewClients);
             IsAdded = true;
             Close();
         }

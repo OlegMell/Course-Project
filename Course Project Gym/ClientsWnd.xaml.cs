@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Course_Project_Gym.DataBase;
+using Course_Project_Gym.DataBase.Repositories;
+using System.ComponentModel;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+
 
 namespace Course_Project_Gym
 {
@@ -19,20 +11,42 @@ namespace Course_Project_Gym
     /// </summary>
     public partial class ClientsWnd : Window
     {
+        public BindingList<Clients> Clients { get; set; }
         public ClientsWnd()
         {
             InitializeComponent();
+            Clients = new BindingList<Clients>();
+            DataContext = this;
+            SetList();
         }
-
-        private void ListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-
-        }
-
-        private void AddBtn_Click(object sender, RoutedEventArgs e)
+        
+        private void AddClientBtn_Click(object sender, RoutedEventArgs e)
         {
             AddClientWnd addClientWnd = new AddClientWnd();
             addClientWnd.ShowDialog();
+            if(addClientWnd.IsAdded)
+            {
+                SetList();
+            }
+        }
+
+        private void SetList()
+        {
+            Clients.Clear();
+            foreach (var item in ClientsRepository.GetInstance().GetAll())
+            {
+                Clients.Add(item as Clients);
+            }
+        }
+
+        private void CheckClient_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void NewSubscription_Click(object sender, RoutedEventArgs e)
+        {
+            //...
         }
     }
 }

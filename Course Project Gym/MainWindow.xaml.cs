@@ -60,14 +60,6 @@ namespace Course_Project_Gym
             }
 
             SetTasks();
-
-            humbrgMenu.CalendarBtn.Click += (s, ar) =>
-            {
-                MainGrid.Visibility = Visibility.Collapsed;
-                RightPanelGrid.Children.Clear();
-                RightPanelGrid.Children.Add(new Calendar());
-                RightPanelGrid.Margin = new Thickness(0);
-            };
         }
 
         private void SetTasks()

@@ -91,9 +91,6 @@
     <Compile Include="AddWnd.xaml.cs">
       <DependentUpon>AddWnd.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Calendar.xaml.cs">
-      <DependentUpon>Calendar.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ClientsWnd.xaml.cs">
       <DependentUpon>ClientsWnd.xaml</DependentUpon>
     </Compile>
@@ -116,6 +113,7 @@
     <Compile Include="DataBase\Repositories\SubscriptionRepository.cs" />
     <Compile Include="DataBase\Repositories\SubscriptionTypeRepository.cs" />
     <Compile Include="DataBase\Repositories\TasksRepository.cs" />
+    <Compile Include="FullGraficWnd.xaml.cs" />
     <Compile Include="ScheduleOfOneUc.xaml.cs">
       <DependentUpon>ScheduleOfOneUc.xaml</DependentUpon>
     </Compile>
@@ -145,13 +143,13 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Calendar.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="ClientsWnd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FullGraficWnd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="HumburgerMenu.xaml">
       <Generator>MSBuild:Compile</Generator>

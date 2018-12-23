@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Course_Project_Gym;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -65,6 +66,12 @@ namespace HamburgerMenu
                 sb.Begin();
                 GridMenu.Opacity = 0.4;
             }
+        }
+
+        private void ClientsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            ClientsWnd clientsWnd = new ClientsWnd();
+            clientsWnd.ShowDialog();
         }
     }
 }

@@ -6,19 +6,28 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Course_Project_Gym"
         mc:Ignorable="d"
-        Title="Clients" Height="340" Width="350">
+        Title="Clients" Height="500" Width="550" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
     <StackPanel>
         <Grid>
             <Border BorderThickness="0 1 0 0" BorderBrush="{DynamicResource MaterialDesignDivider}"/>
-            <ListView MouseDoubleClick="ListView_MouseDoubleClick" ItemsSource="{Binding Clients}" Height="250">
-                <GridView>
-                    <GridViewColumn DisplayMemberBinding="{Binding Name}" Header="Name" Width="80"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Surname}" Header="Surname" Width="80"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding PhoneNumber}" Header="PhoneNumber" Width="80"/>
-                </GridView>
+            <ListView ItemsSource="{Binding Clients}" Height="400">
+                <ListView.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="New subscription" x:Name="NewSubscription" Click="NewSubscription_Click"/>
+                        <MenuItem Header="Check client" x:Name="CheckClient" Click="CheckClient_Click"/>
+                    </ContextMenu>
+                </ListView.ContextMenu>
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn DisplayMemberBinding="{Binding Name}" Header="Name" Width="150"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding SurName}" Header="Surname" Width="150"/>
+                        <GridViewColumn DisplayMemberBinding="{Binding PhoneNumber}" Header="PhoneNumber" Width="150"/>
+                    </GridView>
+                </ListView.View>
             </ListView>
-
         </Grid>
-        <Button x:Name="AddBtn" Click="AddBtn_Click" Height="40" Background="#FFF44336" BorderBrush="#FFF44336" VerticalAlignment="Bottom" Width="100" Content="ADD NEW" Margin="5"/>
+        <Button x:Name="AddClientBtn" Click="AddClientBtn_Click" Height="50" Width="50" Padding="0" Background="#FFF44336" BorderBrush="#FFF44336" VerticalAlignment="Bottom" Margin="15,0,15,50" Style="{StaticResource  MaterialDesignFloatingActionButton}">
+            <materialDesign:PackIcon Kind="Add" Foreground="White" Width="30" Height="30"/>
+        </Button>
     </StackPanel>
 </Window>

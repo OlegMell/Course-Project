@@ -91,7 +91,7 @@
                         <TextBlock Text="Coach" Margin="5,0,0,0"/>
                     </StackPanel>
                 </Button>
-                <Button Width="150" Margin="5" HorizontalContentAlignment="Left">
+                <Button x:Name="ClientsBtn" Click="ClientsBtn_Click" Width="150" Margin="5" HorizontalContentAlignment="Left">
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon Kind="Person"/>
                         <TextBlock Text="Clients" Margin="5,0,0,0"/>
