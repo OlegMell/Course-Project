@@ -26,7 +26,7 @@ namespace Course_Project_Gym
         public Complex CurrentComplex { get; set; }
         private DispatcherTimer timer;
         private bool IsSearchBarOpen { get; set; } = false;
-
+        
         public MainWindow()
         {
             DataContext = this;
@@ -60,6 +60,14 @@ namespace Course_Project_Gym
             }
 
             SetTasks();
+
+            humbrgMenu.CalendarBtn.Click += (s, ar) =>
+            {
+                MainGrid.Visibility = Visibility.Collapsed;
+                RightPanelGrid.Children.Clear();
+                RightPanelGrid.Children.Add(new Calendar());
+                RightPanelGrid.Margin = new Thickness(0);
+            };
         }
 
         private void SetTasks()
@@ -123,11 +131,8 @@ namespace Course_Project_Gym
             }
         }
 
-        private void TopArrowBtn_Click(object sender, RoutedEventArgs e)
-        {
-            ScrollNews.ScrollToHome();
-        }
-        
+        private void TopArrowBtn_Click(object sender, RoutedEventArgs e) => ScrollNews.ScrollToHome();
+
         private void AddNewsBtn_Click(object sender, RoutedEventArgs e)
         {
             addWnd = new AddWnd(CurrentComplex);
@@ -196,7 +201,8 @@ namespace Course_Project_Gym
 
         private void AddGraficBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            AddGraficWnd addGrafic = new AddGraficWnd();
+            addGrafic.ShowDialog();
         }
 
         private void AddTasksBtn_Click(object sender, RoutedEventArgs e)
